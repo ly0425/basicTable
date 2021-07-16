@@ -1,0 +1,242 @@
+.stepBar {
+    padding:0 24px
+}
+.form-group{
+    margin-bottom:3px;
+}
+
+.connect{
+    height: 34px;
+    line-height: 34px;
+}
+.step{
+    .stepBar();
+    h3{
+        font-size:16px;
+        font-weight:bold;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 30px;
+        color: @title-font-color;
+    }
+    .ant-form-item-label{
+        text-align: right;
+    }
+}
+.first-footer-buttons{
+    width: 414px;
+    margin: auto!important;
+    margin-top: 16px!important;
+}
+.step .ant-form { /*不可全局定义*/
+    margin: auto;
+    /* overflow: hidden; */
+    width: 368px;
+}
+.step1 + .footer-buttons{
+        margin-top: 16px;
+}
+.footer-buttons{
+    overflow: hidden;
+    margin: 20px 0;
+    .stepBar();
+
+}
+.StepDatasource{
+    .stepBar();
+
+}
+.btn-primary:focus, .btn:focus{
+    box-shadow: none;
+}
+.next-btn{
+  float: right;
+  display: block!important;
+  height: 24px;
+  background: @btn-bg;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.prev-btn{
+    float: left;
+    height: 24px;
+    background: @sub-button-bg;
+    color:@sub-button-color;
+    border: 1px solid @sub-button-border-color;
+    border-radius: 4px;
+    &:hover, &:focus, &:active, &:active:hover{
+        border-color: @sub-button-hover-border-color;
+        color: @sub-button-hover-color;
+        background: @sub-button-hover-bg;
+    }
+}
+.datasourceNew {
+    margin-top: 24px;
+    position: relative;
+    // .btn-primary:focus{
+    //     color: #fff;
+    //     background: #1890FF;
+    //     border: 1px solid #1890FF;
+    //     border-radius: 20px;
+    // }
+}
+.is-default-dateSource{
+    .footer-buttons #prev-button{
+        display: none
+    }
+}
+
+
+.datasource-form-select{
+    width: 100%;
+    height: 34px;
+    border-radius:4px;
+    border-color: @line-color;
+}
+.datasource-type-select .ant-select-selection{
+    height: 30px;
+}
+.datasource_stepbox{
+    // width: 80%;
+    margin: 0 auto 20px;
+}
+.data-source-tags{
+    height: 90px;
+    overflow: auto;
+}
+.datasourceDetailModal{
+    width:80%!important;
+    height: 80%;
+    .ant-modal-close-x{
+        height: 40px;
+        line-height: 49px;
+    }
+
+
+    .temp-table-name{
+        width: 100%;
+        padding-bottom: 16px;
+        .ant-form-item-label{
+            text-align: left
+        }
+    }
+}
+.detailModal{
+    padding-bottom: 16px
+}
+.datasource-table .ant-table-thead th:nth-child(3),
+.datasource-table .ant-table-thead th:nth-child(5),
+.datasource-table .ant-table-thead th:nth-child(6),
+.datasource-table .ant-table-tbody .ant-table-row td:nth-child(3),
+.datasource-table .ant-table-tbody .ant-table-row td:nth-child(5),
+.datasource-table .ant-table-tbody .ant-table-row td:nth-child(6){
+    text-align: center !important;
+}
+.detail-modal-linkInfo{
+    padding-left: 23%;
+}
+@marginLeft:0px;
+@width:245px;
+.step1 .has-error .ant-form-explain{
+    margin-left: @marginLeft;
+}
+
+.notice-datasourceName{
+    margin-left: @marginLeft;
+    color: #f00;
+    
+}
+.notice-None{
+    display: none;
+}
+.notice-Active{
+    display:block
+}
+.width-marginLeft{
+    margin-left: @marginLeft;
+    width: @width;
+}
+
+.step-sql-call{
+    padding:0 20px 20px 20px;
+    .table_iconpd{
+        width: 100%;
+        a{
+            width: 33%;
+            display: inline-block;
+            text-align: center;
+        }
+    }
+    .search{
+        overflow: hidden;
+        padding-bottom: 16px;
+        label{
+            padding-right: 10px;
+            color: @font-label-color
+
+        }
+    }
+
+}
+
+.custom-box{
+    height: 300px;
+    border: 1px solid #d9d9d9;
+    .box-title{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid #d9d9d9;
+        background-color: #eee;
+        li{
+            float: left;
+            border-right: 1px solid #d9d9d9;
+
+        }
+        li:nth-last-child{
+            border-right:0;
+        }
+
+    }
+    .box-body{
+        width: 100%;
+        height: calc(~'100% - 50px');
+        p{
+            width: 30%;
+            float: left;
+            height: 100%;
+            border-right: 1px solid #d9d9d9;
+            li{
+                border-bottom: 1px solid #d9d9d9;
+                a{
+                    width: 30%;
+                    display: inline-block;
+                    text-align: center;
+                }
+                span{
+                    display: inline-block;
+                    width: 70%;                
+                }
+            }
+        }
+        .content{
+            float: right;
+            // background-color: red;
+            width: 70%;
+            height: 100%;
+        }
+    }
+}
+
+.detailModal-message{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 130px;
+    overflow: scroll;
+
+}
+.model-list{
+    .anticon-caret-down{display:block;}
+}

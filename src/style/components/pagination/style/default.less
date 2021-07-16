@@ -1,0 +1,169 @@
+//@import "../../style/themes/default";
+//@import "~antd/lib/style/mixins/index";
+//@import "~antd/lib/input/style/index";
+//@import "~antd/lib/pagination/style/index";
+//自定义圆角标签
+@pagination-radius:50%;
+@primary-color:@blue-6;
+@pagination-prefix-cls: ~"@{ant-prefix}-pagination";
+.@{pagination-prefix-cls} {
+  &.mini &-item {
+    border:1px solid @border;
+    min-width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 5px;
+    &-active {
+      border:1px solid @primary-color;
+    }
+  }
+  &-total-text {
+    color:@text-color;
+  }
+  &-item {
+    // border-radius: @pagination-radius;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    a {
+      vertical-align: top;
+    }
+
+    &-active {
+      color: #fff;
+      background: @primary-color;
+      border:1px solid @primary-color;
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  &-prev,
+  &-next,
+  &-jump-prev,
+  &-jump-next {
+    // border-radius: @pagination-radius;
+  }
+  &-jump-next:after, &-jump-prev:after{
+    color:inherit;
+  }
+  &-prev,
+  &-next {
+    outline: 0;
+
+    a {
+      color: @text-color;
+      user-select: none;
+    }
+
+    &:hover a {
+      border-color: @primary-5;
+    }
+
+    .@{pagination-prefix-cls}-item-link {
+      border: @border-width-base @border-style-base @border-color-base;
+      background-color: @component-background;
+      // border-radius: 25px;
+      outline: none;
+      display: block;
+      transition: all .3s;
+
+      &:after {
+        font-size: 12px;
+        display: block;
+        font-family: "anticon";
+        text-align: center;
+        font-weight: 500;
+      }
+    }
+
+    &:focus .@{pagination-prefix-cls}-item-link,
+    &:hover .@{pagination-prefix-cls}-item-link {
+      border-color: @primary-color;
+      color: @primary-color;
+    }
+  }
+
+  &-prev {
+    .@{pagination-prefix-cls}-item-link:after {
+      content: "\e620";
+      display: block;
+    }
+  }
+
+  &-next {
+    .@{pagination-prefix-cls}-item-link:after {
+      content: "\e61f";
+      display: block;
+    }
+  }
+
+  &-disabled {
+    &,
+    &:hover,
+    &:focus {
+      cursor: not-allowed;
+      a,
+      .@{pagination-prefix-cls}-item-link {
+        border-color: @border-color-base;
+        color: @disabled-color;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &-slash {
+    margin: 0 5px 0 5px;
+  }
+
+  &-options {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px;
+
+    &-size-changer.@{ant-prefix}-select {
+      display: inline-block;
+      margin-right: 8px;
+      .ant-select-selection{
+        // border-radius: 18px;
+      }
+    }
+
+    &-quick-jumper {
+      display: inline-block;
+      vertical-align: top;
+      height: @input-height-base;
+      line-height: @input-height-base;
+      color: @text-color;
+      input{
+        color:@text-color;
+        background-color: transparent;
+        border-color: #d9d9d9;
+        // border-radius: 18px;
+        &:hover,&:focus{
+          border-color: #40a9ff;
+          box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+        }
+      }
+    }
+  }
+}
+.ant-pagination-simple .ant-pagination-simple-pager input{
+  margin-right: 0px;
+  box-sizing: border-box;
+  background: transparent;
+  // border-radius: 4px;
+  border:1px solid #d9d9d9;
+  outline: none;
+  padding: 0;
+  height: 100%;
+  text-align:center;
+  transition: border-color .3s;
+  width: 35px;
+}
+
+.ant-pagination-simple-pager{
+  margin-left: 8px;
+}
+

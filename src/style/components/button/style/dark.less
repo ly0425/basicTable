@@ -1,0 +1,123 @@
+//@import "../../style/themes/dark";
+//@import "~antd/lib/style/mixins/index";
+//@import "~antd/lib/button/style/index";
+//自定义颜色
+//圆角button
+@btn-radius:4px;
+@prefix-btn: ~"@{ant-prefix}-btn";
+.@{prefix-btn} {
+  border-radius: @btn-radius;
+  height: 31px;
+  line-height: 1.8;
+  color:@btnwhite;
+  background: transparent;
+  border-color: @white3;
+  transition: all 0.1s linear;
+}
+.@{prefix-btn}:hover{
+  background: transparent;
+  border-color: @btn-hover;
+  color: @btn-hover;
+  span{
+    color: @btn-hover;
+  }
+
+}
+ .@{prefix-btn}:active{
+  background: transparent;
+  border-color:@btn-focus;
+  color: @btn-focus;
+  span{
+    color: @btn-focus;
+  }
+}
+
+@prefix-btn-sm: ~"@{ant-prefix}-btn-sm";
+.@{prefix-btn-sm}{
+  height: 22px;
+  line-height: 19px;
+  border-radius: @btn-radius;
+  border-color:@white3;
+   font-size:12px;
+}
+
+.@{prefix-btn-sm}:hover, .@{prefix-btn-sm}:focus, .@{prefix-btn-sm}:active, .@{prefix-btn-sm}.active {
+  background: transparent;
+}
+.@{prefix-btn}-primary {
+   background: @primary-color;
+   span {
+     color: @btn-primary-span;
+   }
+ }
+.@{prefix-btn}-primary:hover {
+   background: @btn-hover;
+   span {
+     color: @btn-primary-span;
+   }
+ }
+.@{prefix-btn}-primary:focus {
+   background: @btn-focus;
+   border: @btn-primary-focus-border;
+   span {
+     color: @btn-primary-span;
+   }
+ }
+.@{prefix-btn}-primary:active {
+   background: @btn-primary-active-bg;
+   border-color: transparent;
+   span {
+     color: @btn-primary-span;
+   }
+ }
+.ant-btn-circle, .ant-btn-circle-outline {
+  width: 30px;
+  height: 30px;
+}
+
+//兼容bootstrap的下一步按钮
+.btn-primary {
+  color: #fff;
+  background: @primary-color;
+  border: 1px solid @primary-color;
+  border-radius: @btn-radius;
+}
+.btn-primary:hover,.btn-primary:focus,.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover{
+  color: #fff;
+  background: @btn-hover;
+  border-color:@primary-color;
+
+  outline: none;
+}
+.ant-btn.disabled:active, .ant-btn.disabled:focus, .ant-btn.disabled:hover, .ant-btn[disabled]{
+    background-color: rgba(255,255,255,0.3);
+    border-color: transparent;
+    color:#b7b7b7;
+}
+// －－－－－搜索框按钮颜色－－－－
+.custom-search{
+
+  button{
+    border: 0!important;
+    height: 100%!important;
+    background: transparent!important;
+    color: @sub-button-color!important;
+    i:before{
+      /*content: "\e65e"!important;*/
+      font-size: 14px;
+      display: block;
+      /*font-family: "iconfont" !important;*/
+      color: rgba(255, 255, 255, 0.9);
+    }
+   }
+   .ant-btn-clicked{
+     border: 0!important;
+     border-width: 0!important
+   }
+   .ant-btn-clicked:after{
+    border-width: 0!important;
+    animation: none;
+    -webkit-animation:none;
+
+   }
+}

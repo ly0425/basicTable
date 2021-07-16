@@ -1,0 +1,422 @@
+.public-style {
+  border-bottom: 1px dashed @fieldset-border;
+  padding: 8px 0;
+}
+
+.field-name {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+
+}
+
+.inputTextWrap {
+  width: 260px;
+  margin-left: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 32px;
+  .ant-calendar-picker{width: 100% !important;}
+  .ant-select {
+    height: 32px;
+
+  }
+}
+
+.Field-Operation-InputText {
+  display: inline-block;
+  .inputTextCss > div{ width: 100%;}
+  .inputTextCss >.ant-input-number-handler-wrap{width: 22px;}
+}
+.ant-input-number-handler-wrap{
+  opacity: 1;
+}
+
+.numberText {
+  width: 112px;
+}
+
+.conditionComponent-list {
+
+  .ant-select-selection__placeholder {
+    // line-height: 30px;
+    height: 30px
+  }
+
+  .groupBoxContent {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    margin-top: -22px;
+    padding: 28px 8px 8px 8px;
+
+  }
+
+
+  .numberText {
+    margin-right: 0;
+    vertical-align: middle
+  }
+
+  .required-btn,
+  .commonUse-btn {
+    margin-left: 8px;
+    margin-right: 0;
+  }
+
+
+  .commonUse-btn {
+    display: inline;
+    vertical-align: middle;
+
+  }
+
+  .delete-btn {
+    vertical-align: middle;
+    margin-left: 8px
+  }
+
+  .inputTextCss {
+    width: 100%;
+    vertical-align: top;
+    display: flex;
+    align-items: center;
+    .treeref{
+      line-height: 0.8;
+    }
+ 
+  }
+.select-range {
+  display: flex;
+  .ant-select{
+     width: 40%;
+     .ant-select-selection--single{
+       width: 100%;
+     }
+  }
+}
+  .field-operation {
+    width: 96px;
+    margin-left: 8px;
+    vertical-align: middle
+  }
+
+  .createFormItemsList-li {
+    .public-style()
+  }
+  .createFormItemsRange{
+    .FormItems {
+      min-height: 32px;
+      display: inline-block;
+    }
+  }
+  .conditions-list {
+    .op {
+      width: 15%;
+      display: inline-block
+    }
+
+    li {
+      .FormItems {
+        min-height: 32px;
+        // width: 90%;
+        display: inline-block;
+      }
+
+
+    }
+
+    .group {
+      .public-style();
+
+      .group-label {
+        width: 460px;
+        display: inline-block;
+        .group-name{
+          overflow: hidden;
+          height: 24px;
+          text-overflow: ellipsis;
+          width: 100%;
+          white-space: nowrap;
+          text-align: left;
+
+        }
+      }
+
+      .FormItems {
+        height: auto;
+        // width: 90%;
+      }
+    }
+  }
+  .DataChain{
+    width: 87px;
+  }
+  .DataChain-FieldSelect{
+    width: 96px;
+  }
+}
+
+.field-operation-select {
+  margin-bottom: 16px;display: flex;
+
+  .ant-cascader-menus {
+    div {
+      ul {
+        // background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+
+      }
+
+      li {
+        width: 453px;
+      }
+    }
+  }
+}
+
+.Cascader-select {
+  .ant-cascader-menus {
+    box-shadow: none;
+    // background: transparent;
+
+    div {
+      background: transparent;
+
+      li {
+
+        width: 225px;
+      }
+    }
+  }
+}
+
+//---conditionsModal页面样式----
+.conditionsModal-range_all {
+  width: 20%;
+  display: inline-block;
+  color: @color-first-title-white-toggle;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  vertical-align: middle
+}
+
+.runtimeModel::before {
+  content: "";
+  background-color: #efefef;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  bottom: 10px;
+  right: 0;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+.ConditionsModal-Noting {
+  width: 100%;
+  text-align: center;
+  color: @font-unData-color
+}
+
+.conditionModal-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  b{
+    color: #ff4d4f
+  }
+}
+
+
+
+.ReferenceInfoRef {
+  width: 100%;
+  position: relative;
+  border: 1px solid @fieldset-border;
+  border-radius: 4px;
+
+  .ant-select-selection--multiple .ant-select-selection__choice__content {
+    max-width: 110px
+  }
+
+  .ant-select-selection__rendered {
+    line-height: inherit;
+    // overflow: hidden;
+
+  }
+  .ant-select-selection__placeholder{
+    line-height: 30px
+  }
+
+  .ant-select {
+    min-height: 30px;
+    height: auto;
+  }
+
+
+  .ant-select-selection--multiple {
+    border: 0px;
+    min-height: 30px;
+    padding-bottom: 0
+  }
+
+  .ant-select-selection {
+    border-color: transparent;
+  }
+
+  .ant-select-selection,
+  .ant-select-selection:focus {
+    box-shadow: none
+  }
+
+  .refercen {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 9%;
+    border-left: 1px solid @fieldset-border;
+
+    overflow: hidden;
+
+    div {
+      height: 50%;
+      text-align: center;
+      line-height: 13px;
+      font-size: 10px;
+
+    }
+
+    .up:hover {
+      margin-top: -2px;
+    }
+
+    .down:hover {
+      margin-top: 1px;
+
+    }
+
+    .up {
+      border-bottom: 0.5px solid transparent;
+    }
+
+    .down {
+      padding-top: 1px;
+      border-top: 0.5px solid @fieldset-border;
+    }
+
+    .show {
+      color: @referenceInfo;
+    }
+  }
+}
+
+.ReferenceInfoRef:hover {
+  border-color: @bi-input-hover-border-color;
+
+}
+
+.treeref {
+  position: relative;
+
+  .refercen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    line-height: 34px;
+  }
+
+  input {
+    height: 32px;
+
+  }
+}
+
+.Infotip {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 10px;
+
+  span:nth-of-type(1) {
+    color: #1890ff;
+    padding-right: 5px;
+
+    i {
+      font-weight: 900;
+    }
+  }
+}
+
+.choose-params-modal{
+
+  .actionModal-toolContent{
+    left: 60%;
+    right: 0;
+    top: 47px;
+    height: auto;
+    background-color: @headerbg;
+    padding: 10px;
+    width: 40%;
+    .close-but{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #999;
+      top: 50%;
+      margin-top: -20px;
+      border-radius: 50%;
+      overflow: hidden;
+      left: -20px;
+      text-align: right;
+      line-height: 40px;
+      color: #fff;
+    }
+  }
+}
+.MoreSelectAddComponent{
+  width: 100%;
+
+  .ant-checkbox-group,.ant-radio-group{
+    padding: 10px;
+  }
+  .select-content{
+    display: inline-block;
+    width: 460px;
+  }
+  .select-list{
+    padding: 5px 5px 0;
+    box-shadow: 0 1px 9px rgba(0,0,0,0.1);
+  }
+  .select-but{
+    border: 1px solid #d9d9d9;
+    width: 100%;
+    height: 32px;
+    padding: 4px 11px;
+  }
+}
+
+// .ant-calendar-picker{//谁用这个给外层元素加个class，不要把范围写的这么大，影响到vadp了
+//   width: 260px!important;
+//   div{
+//     width: 260px!important;
+
+//   }
+// }
+
+.SettingRelativeDate{
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  label{
+    width: 30%;
+  }
+}
+

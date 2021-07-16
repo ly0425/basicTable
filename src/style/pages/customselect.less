@@ -1,0 +1,187 @@
+body{
+	background:#999;
+}
+
+.b-custom-select {
+	position:relative;
+	display: inline-block;
+	width: 100%;
+	height: 32px;
+	background: transparent;
+  border: 1px solid @line-color;
+	border-radius:4px;
+	font-size: 13px;
+	vertical-align: middle;
+	text-align: left;
+	margin-right: 10px;
+}
+.b-custom-select_disabled {
+	color: #bcbcbc;
+	background: #f9f9f9;
+}
+.b-custom-select_focus {
+}
+.b-custom-select_expanded {
+	z-index: 199;
+	height: 32px;
+	border-color:@bi-input-hover-border-color;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+}
+.lte7 .b-custom-select {
+	display: inline;
+	zoom:1;
+}
+.b-custom-select__title {
+	cursor: pointer;
+	overflow: hidden;
+	color: @title-font-color;
+	height: 32px;
+    line-height: 17px;
+}
+.b-custom-select__title__text {
+	margin: 5px 30px 3px 10px;
+	font-size: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.b-custom-select__title__icon {
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  display: block;
+  width: 13px;
+  height: 13px;
+  color: @b-custom-select-title-icon-color;
+
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+}
+.b-custom-select__title__icon:after {
+  display: block;
+  font-family: anticon!important;
+  content: "\E61D";
+}
+.b-custom-select_expanded .b-custom-select__title__icon {
+  transform: rotate(180deg);
+  transition: transform .2s ease,-webkit-transform .2s ease;
+}
+.b-custom-select__title__input {
+  	height: 25px;
+  	padding: 8px 9px;
+	border: none;
+	background: none;
+	outline: 0;
+	font-family: "microsoft yahei";
+	font-size: 12px;
+	color: @title-font-color;
+}
+.b-custom-select__dropdown {
+	// position: fixed !important;
+	border-radius:4px;
+	// overflow: hidden;
+	box-shadow: 0 2px 8px @b-custom-select-list-box-shadow-color;
+	border-radius: 4px;
+	z-index:9999 !important;
+	max-height: 200px;
+    overflow: auto;
+	 background: @b-custom-select-dropdown-bg;
+	//  left: 15px!important;
+	//  top: 95px!important;
+}
+
+.b-custom-select__list {
+	padding: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.b-custom-select__group {
+	padding: 4px;
+	white-space: nowrap;
+	font-family: "microsoft yahei";
+	font-size: 12px;
+	font-weight: bold;
+}
+.b-custom-select__item {
+	position: relative;
+    display: block;
+    padding: 8px 5px 8px 10px;
+    height: 32px;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: "microsoft yahei";
+    font-size: 12px;
+    color: @b-custom-select-item-color;
+}
+.b-custom-select_multiple .b-custom-select__item {
+}
+//.b-custom-select__item:hover, .b-custom-select__item.selected {
+//  background: rgba(243, 207, 69, 0.3);
+//}
+.b-custom-select__item:hover{
+	background: @b-custom-select-item-hover-bg;
+}
+.b-custom-select__item.disabled {
+	color: #bcbcbc;
+}
+.b-custom-select_multiple .b-custom-select__item:hover, .b-custom-select_multiple .b-custom-select__item.selected {
+	background: none;
+}
+.b-custom-select_multiple .b-custom-select__item.selected:before {
+	background-position: -46px 0;
+}
+.b-custom-select__wrap-scrollbar {
+	position: absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	width:22px;
+	// border-left: 1px solid #ececec;
+}
+ .b-custom-select__dropdown__inner::-webkit-scrollbar {
+width: 0;
+}
+.b-custom-select__wrap-scrollbar:after {
+	content: "";
+	position: absolute;
+	top: 3px;
+	bottom: 3px;
+	left: 9px;
+	width: 3px;
+	// border-left: 1px solid #b1b1b1;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	// background: #cccccc;
+}
+.b-custom-select__scrollbar {
+	position: absolute;
+	z-index: 1;
+	left:0;
+	right:0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 8px;
+	height: 40px !important;
+	background: @scrollbar-thumb-bg-color;
+	border-radius: 4px;
+	cursor:pointer;
+}
+
+  .modal-backdrop {
+    display: none!important;
+  }
+  .light .bi .ant-pagination-item-active a{
+	color: #fff;
+  }
+  .ant-cascader-menus{
+	z-index:3100//平台modal层级太高
+  }

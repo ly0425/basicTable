@@ -1,0 +1,55 @@
+  .dimension-tree-node{
+    position: relative;
+    height: 28px;
+    line-height: 28px;
+    width: 100%;
+    user-select: none;
+    // width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .dimension-tree-node-icon{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+    .dimension-tree-node-parent-selected{
+      background-color:#40a9ff;
+      color: #263238 !important;
+    }
+    .dimension-tree-node-parent-normal{
+      background-color: inherit;
+    }
+    .dimension-tree-node-selected{
+      cursor: pointer;
+      background-color: #e9f7fe;
+      display: inline-block;
+      width: 100%;
+    }
+    .dimension-tree-node-normal{
+      cursor: pointer;
+      background-color: inherit;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  .dimension-tree-node:hover{
+    color: #6b9de3;
+  }
+  .dimension-tree-node-expand{
+    cursor: pointer;
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.65) transparent transparent transparent;
+    position: absolute;
+    top: 12px;
+  }
+  .dimension-tree-node-close{
+    cursor: pointer;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.65);
+    position: absolute;
+    left: 2px;
+    top: 9px;
+  }

@@ -1,0 +1,147 @@
+.bi-border-bottom{ margin-bottom: 0 }
+.ant-modal-body   #TabsConWrap{overflow: auto !important;}
+.dashboard_display_item .my-tabs .ant-tabs-bar{padding-right: 20px;padding-left: 20px;}
+.my-tabs{
+  padding: 0;height: 100%;box-sizing: border-box;
+    &.ant-tabs{
+        overflow: visible; 
+    }
+   .ant-tabs{
+       overflow: inherit;
+   }
+   .ant-tabs-nav .ant-tabs-tab-active{font-weight: normal;}
+   .ant-tabs-tab{white-space: pre;}
+   .ant-tabs-content {margin-top:0;height: calc(~'100% - 42px - 16px');}
+   .ant-tabs-bar{
+        padding: 0;
+       .ant-tabs-tab{
+        margin-right:8px;
+        .anticon-close{
+          width: 16px;
+          border-radius: 50%;
+          height: 14px;
+          line-height: 14px;
+          margin-top: -3px;
+          font-size: 15px;
+          &:hover{
+               color:@primary-color;
+          }}}} 
+     .tabPane{width: 100%;height:40px;padding: 0 16px;}
+     &.ant-tabs.ant-tabs-card>.ant-tabs-bar .ant-tabs-tab{
+      padding-left: 0;padding-right: 0;margin-right:32px;background: none;border:none;
+    }
+     &.ant-tabs.ant-tabs-card>.ant-tabs-bar .ant-tabs-ink-bar{visibility: initial}
+     .ant-tabs-extra-content .ant-tabs-new-tab{
+                border-radius: 50%;
+                line-height: 18px;
+                font-weight: bold;
+                background: @primary-color;
+                border-color:@primary-color;
+                &:hover {
+                  background: @btn-hover;
+                }
+         } 
+}
+//BI4-1129 IE10 多页签。添加五个页签。页面出现遮挡。
+/* .my-tabs   .ant-tabs-nav-wrap{max-width: calc(~'100vw - 540px')}  //展开 */
+.is-not-collapsed  .my-tabs   .ant-tabs-nav-wrap{max-width: calc(~'100vw - 340px')} //收起
+.fullScreen .my-tabs   .ant-tabs-nav-wrap{max-width:inherit}  //全屏
+.fullScreen{position: fixed !important;z-index: 222;left: 0;right: 0;top: 0;bottom: 0;width: 100% !important;height: 100%  !important;margin-left: 0   !important;background:@dashboard-right-background}
+
+.board-iframe .header-div{
+      display: none
+}
+.header-div{}
+.tabs-left-bar{
+         padding: 0;
+         padding: 0;
+         position:absolute;
+         height:calc(~'100vh - 64px');z-index: 2;overflow: hidden;
+}
+.tabs-right-container{
+         padding: 0;
+         width:100%;
+         position: relative;
+}
+.model-delete {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  font-size: 20px;
+  z-index: 1000;
+  color: @title-font-color;
+}
+.height-100{height: 100%}
+.model-con{
+  position: relative;
+}
+.pane-name{margin-right: 4px;}
+.my-tabs-model-con{
+  .my-tabs #dashboardRightFull{width: 100%;height: 100%}
+  .my-tabs #parentContainer{height: 100% !important}
+  .my-tabs #parentContainer > .row {height: 100%}
+  .my-tabs #dashboardRight{width: 100% !important;height: 100% !important;}
+  // .my-tabs  #dashboardC{height: 100% !important}
+  /* //解决隐藏状态下echarts宽度为100px，不正确*/
+  .ant-tabs .ant-tabs-content{position: relative;}
+  .ant-tabs .ant-tabs-tabpane{
+     position: absolute;top: 0;left: 0 
+  }
+  .ant-tabs .ant-tabs-tabpane-active{z-index: 777;}
+  .ant-tabs .ant-tabs-tabpane-inactive{z-index: 0;}
+  .ant-tabs-no-animation>.ant-tabs-content>.ant-tabs-tabpane-inactive, .ant-tabs-vertical>.ant-tabs-content>.ant-tabs-tabpane-inactive, .no-flex>.ant-tabs-content>.ant-tabs-tabpane-inactive{
+    display: block;
+  }
+  .ant-tabs .dashboard_main{
+      border:none;
+  }
+  .ant-tabs #dashboardC{ padding-left:0 !important;padding-right:0 !important;padding-bottom:0 !important;/* margin-top: -14px */}
+  .ant-tabs .analysis_container{overflow: visible;}
+}
+.storyboard  .my-tabs .ant-tabs-bar{ }
+/*属性面板*/
+.property-panel-open{
+     .collapse-arrow{
+         .icon-right{
+             display: none;
+         }
+         .icon-left{
+          display: block;
+         }
+      }
+      .bi-border-bottom .datasource span{
+          display: block;
+      }
+      .dashboard-property-collapse{
+            display: none
+       }
+       .attribute-setting{
+            display: block !important;
+       }
+}
+.property-panel-fold {
+      .collapse-arrow{
+             .icon-right{
+                 display: block;
+             }
+             .icon-left{
+              display: none;
+             }
+        }
+        .bi-border-bottom .datasource  span{
+          display: none;
+      }
+       .dashboard-property-collapse{
+            display: table-cell;
+       }
+       .attribute-setting{
+            display: none !important;
+        }
+}
+#tabsCon{background:@dashboard-right-background}
+#tabsCon .dashboard-trigger-btn{right:0}
+#tabsCon > .dashboard_main{background:none}
+#tabsCon  .ant-tabs-content{/* background: @tabs-main-background; */}
+#tabsCon .setting-board{top:0;height: auto;bottom: 0}

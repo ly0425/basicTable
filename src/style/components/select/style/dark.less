@@ -1,0 +1,159 @@
+@select-prefix-cls: ~"@{ant-prefix}-select";
+
+.borderRadius>.ant-select-selection{
+  border-radius: @bi-select-and-input-border-radius;
+}
+
+.@{select-prefix-cls} {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  color: @text-color;
+  font-size: @font-size-base;
+
+  > ul > li > a {
+    padding: 0;
+    background-color: @component-background;
+  }
+
+  &-selection--single {
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid @input-color;
+  }
+  &-dropdown-menu {
+    background: @modal-bg;
+    font-size: 12px;
+    &-item {
+      color: @text-color;
+      &:hover {
+        background-color: @select-hover;
+      }
+
+      &-disabled {
+        color: @disabled-color;
+        cursor: not-allowed;
+
+        &:hover {
+          color: @disabled-color;
+          background-color: @select-hover;
+          cursor: not-allowed;
+        }
+      }
+
+      &-selected {
+        &,
+        &:hover {
+          background-color: @select-hover;
+          font-weight: 600;
+          color: @text-color;
+        }
+      }
+
+      &-active {
+        background-color: @select-hover;
+      }
+
+      &-divider {
+        height: 1px;
+        margin: 1px 0;
+        overflow: hidden;
+        background-color: @border-color-split;
+        line-height: 0;
+      }
+    }
+
+  }
+  &-dropdown{
+    background: @modal-bg;
+    color: @white7;
+  }
+
+}
+
+::selection {
+  background: @primary-color;
+  color: #fff;
+}
+
+.ant-select-tree-dropdown .ant-select-dropdown-search .ant-select-search__field {
+  border: 1px solid @white3;
+  border-radius: 25px;
+  background: transparent;
+}
+.ant-select-tree-dropdown .ant-select-not-found {
+  color: @white3;
+}
+.ant-select-tree-dropdown .ant-select-not-found:hover {
+  background: @black;
+}
+
+.ant-select-selection__clear {
+  background: @cascaderbg;
+  color: @primary-color;
+  border-radius: 20px;
+}
+//下拉搜索选择树
+.ant-select-tree {
+  color: @white7;
+}
+.ant-select-arrow {
+  color:@white3;
+}
+.ant-select-tree li .ant-select-tree-node-content-wrapper {
+  color: @white7;
+}
+.ant-select-tree li .ant-select-tree-node-content-wrapper:hover {
+  background:@component-background;
+  color: @white;
+}
+.ant-select-tree li .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+  background:@component-background;
+  color: @white;
+}
+.ant-select-tree li span.ant-select-tree-switcher.ant-select-tree-switcher_open:after {
+  color: @white;
+}
+
+.@{ant-prefix}-select,
+.@{ant-prefix}-cascader-picker {
+  &:only-child {
+    top:0;
+
+    &.@{ant-prefix}-select-sm,
+    &.@{ant-prefix}-cascader-picker-small {
+      top: 0;
+    }
+
+    &.@{ant-prefix}-select-lg,
+    &.@{ant-prefix}-cascader-picker-large {
+      top: 0;
+    }
+  }
+}
+.ant-select-selection
+.ant-select-selection{
+  background: @component-background;
+  border: 1px solid @input-color;
+  .ant-select-selection__choice{
+    border: 1px solid @input-color;
+    background: @component-background;
+    color: @white7;
+    .ant-select-selection__choice__remove{
+      color: @white7;
+    }
+  }
+  .@{ant-prefix}-select-selection__rendered{
+    line-height: 30px;
+  }
+}
+
+// ---改兼容IE---
+.ant-select-open {
+  .ant-select-arrow:before{
+    -ms-transform-origin: center center!important;
+    -ms-transform:rotate(360deg) translateY(6px)!important;
+
+   }
+}

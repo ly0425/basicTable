@@ -1,0 +1,106 @@
+//@import "../../style/themes/default";
+//@import "~antd/lib/style/mixins/index";
+//@import "~antd/lib/button/style/index";
+//自定义颜色
+//圆角button
+@btn-radius:4px;
+@prefix-btn: ~"@{ant-prefix}-btn";
+.@{prefix-btn} {
+  border-radius: @btn-radius;
+  height: 31px;
+  line-height: 1.8;
+  color:@btnfont;
+  background: transparent;
+  border-color: @btnborder;
+  transition: all 0.1s linear;
+
+  &-primary{
+    background: @primary-color;
+    border-color:@primary-color;
+    color: @btnwhite;
+  }
+}
+.@{prefix-btn}:hover,  .@{prefix-btn}:active {
+  background: #fff;
+  border-color: #3EA9FF;
+  color: #3EA9FF;
+  span{
+    color: #3EA9FF;
+  }
+}
+@prefix-btn-sm: ~"@{ant-prefix}-btn-sm";
+.@{prefix-btn-sm}{
+  height: 22px;
+  line-height: 19px;
+  border-radius: @btn-radius;
+  font-size:12px;
+}
+.@{prefix-btn-sm}:hover, .@{prefix-btn-sm}:focus, .@{prefix-btn-sm}:active, .@{prefix-btn-sm}.active {
+  background: @btnwhite;
+  border-color: @btn-hover;
+}
+.@{prefix-btn}-primary:hover,.@{prefix-btn}-primary:focus{
+    background: @btn-hover;
+    border-color: @btn-hover;
+    span{
+      color: @btnwhite;
+    }
+}
+.@{prefix-btn}-primary:focus{
+  background: @btn-focus;
+  border-color:@btn-focus;
+}
+.ant-btn-circle, .ant-btn-circle-outline {
+  width: 30px;
+  height: 30px;
+}
+
+//兼容bootstrap的下一步按钮
+.btn-primary {
+  color:@btnwhite;
+  background: @primary-color;
+  border: 1px solid @primary-color;
+  border-radius: @btn-radius;
+}
+.btn-primary:hover,.btn-primary:focus,.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover{
+  background-color: @btnwhite;
+  border-color: @btn-hover;
+  color:@btn-hover;
+  outline: none;
+}
+
+.ant-btn i.iconfont {color: #666}
+.ant-btn:hover  i.iconfont{color: #3EA9FF}
+.ant-btn.disabled:active, .ant-btn.disabled:focus, .ant-btn.disabled:hover, .ant-btn[disabled]{
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+    color:#b7b7b7;
+}
+// －－－－－搜索框按钮颜色－－－－
+.custom-search{
+
+  button{
+    border: 0!important;
+    height: 100%!important;
+    background: transparent!important;
+    color: @sub-button-color!important;
+    i:before{
+      /*content: "\e65e"!important;*/
+      font-size: 14px;
+      display: block;
+      /*font-family: "iconfont" !important;*/
+      color: #333;
+    }
+    
+   }
+   .ant-btn-clicked{
+    border: 0!important;
+    border-width: 0!important
+  }
+  .ant-btn-clicked:after{
+   border-width: 0!important;
+   animation: none;
+   -webkit-animation:none;
+
+  }
+}

@@ -1,0 +1,79 @@
+
+.vheditor_text {
+  color: @title-font-color;
+  padding: 4px;
+  /* user-select:none;
+  white-space: pre;
+  min-height: 14px; */
+}
+.vheditor_text p{
+  user-select:none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  min-height: 20.67px;
+  font-size: 16px;
+}
+
+.vheditor_text_border {
+  border:1px solid @line-color;
+  border-radius: 4px;
+}
+
+.editor_background{
+    background-color:  @richEditor-braft-bg-color ;
+    /* background-color:  @context-menu-bg ; */
+    border:1px solid @line-color ;
+    color: @title-font-color;
+    box-shadow:0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.BraftEditor-controlBar .control-item.button,.Braft-dropdown .dropdown-handler{
+  color:@title-font-color !important ;
+}
+
+.Braft-dropdown .dropdown-content{
+  background-color: @richEditor-dropdown-content;
+}
+.braft-line-heights-wrap li, .braft-font-sizes-wrap li, .Braft-dropdown .dropdown-content .menu-item:not(.active){
+  color: @richEditor-braft-line-heights-wrap-li-color;
+  background-color: @richEditor-braft-line-heights-wrap-li-bg;
+}
+.braft-line-heights-wrap li:hover, .braft-font-sizes-wrap li:hover, .Braft-dropdown .dropdown-content .menu-item:hover{
+  color: @richEditor-braft-line-heights-wrap-li-hover-color;
+  background-color: @richEditor-braft-line-heights-wrap-li-hover-bg;
+}
+.braft-line-heights-wrap li.active, .Braft-dropdown .dropdown-content .menu-item.active, .braft-font-sizes-wrap li.active {
+    background-color: #3498db;
+    color: #fff;
+}
+
+
+.braft-line-heights-wrap li, .braft-letter-spacings-wrap li, .Braft-dropdown .dropdown-content .menu-item:not(.active){
+  color: @richEditor-braft-line-heights-wrap-li-color;
+  background-color: @richEditor-braft-line-heights-wrap-li-bg;
+}
+.braft-line-heights-wrap li:hover, .braft-letter-spacings-wrap li:hover, .Braft-dropdown .dropdown-content .menu-item:hover{
+  color: @richEditor-braft-line-heights-wrap-li-hover-color;
+  background-color: @richEditor-braft-line-heights-wrap-li-hover-bg;
+}
+.braft-line-heights-wrap li.active, .Braft-dropdown .dropdown-content .menu-item.active, .braft-letter-spacings-wrap li.active {
+    background-color: #3498db;
+    color: #fff;
+}
+.braft-color-switch-buttons button{
+  color: @richEditor-braft-color-switch-buttons-button-color;
+}
+
+/* .BraftEditor-content *{
+  line-height: 1 ;
+} */
+/* .public-DraftStyleDefault-ltr{
+  text-align: unset;
+} */
+.dashboard_main strong{
+  font-weight: bold;
+}
+.dashboard_main em{
+  font-style:italic;
+}

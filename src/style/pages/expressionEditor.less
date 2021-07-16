@@ -1,0 +1,93 @@
+.expressionEditor {
+  .ant-input {
+    margin-bottom: 5px;
+  }
+  .ant-alert-success,
+  .ant-alert-error {
+    border-width: 0;
+    background-color: transparent;
+    margin: -5px -12px;
+  }
+  .commonItems {
+    margin: 12px 0;
+    .ant-btn {
+      height: 25px;
+      line-height: 1;
+      min-width: 25px;
+      margin-right: 5px;
+      padding: 3px;
+      border: 1px solid #999999;
+      border-radius: 3px;
+    }
+  }
+  .categaries {
+    height: 300px;
+    .groupBoxContent {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .items {
+    height: 300px;
+    margin: 0 12px;
+    .item {
+      height: 25px;
+      line-height: 25px;
+    }
+  }
+  .description {
+    height: 146px;
+    margin: 0;
+  }
+  .example {
+    height: 146px;
+    margin: 8px 0 0 0;
+  }
+  fieldset {
+    border: 1px solid @fieldset-border;
+    border-radius: 5px;
+    padding: 0;
+    legend {
+      // －改－－width: initial;不兼容IE11及其以下浏览器     
+      width:auto;
+      height: 22px;
+      border:0;
+      color: @fieldset-legend;
+      span {
+        padding: 0px 10px;
+      }
+      font-size: 14px;
+    }
+    .groupBoxContent {
+      overflow: auto;
+      height: 100%;
+      width: 100%;
+      margin-top: -22px;
+      padding: 22px 8px 0 8px;
+      color:@normal-text-font-color;
+      ul.ant-tree{
+        width: 85%;
+      }
+    }
+  }
+}
+
+.functionParamsEditor {
+  td {
+    padding: 0 3px 8px;
+  }
+  tr:last-child td {
+    padding-bottom: 0;
+  }
+}
+
+.expressionEditorModal {
+  .ant-modal-content {
+    .ant-modal-body {
+      padding: 30px 30px 0 30px;
+    }
+    .ant-modal-footer button {
+      margin-bottom: 0;
+    }
+  }
+}

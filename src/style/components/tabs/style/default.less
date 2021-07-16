@@ -1,0 +1,19 @@
+//@import "../../style/themes/default";
+//@import "~antd/lib/style/mixins/index";
+//@import "~antd/lib/tabs/style/index";
+@tab-prefix-cls: ~"@{ant-prefix}-tabs";
+
+.@{tab-prefix-cls}{
+	  &.@{tab-prefix-cls}-card > .@{tab-prefix-cls}-bar .@{tab-prefix-cls}-tab{
+              color: #666;
+        } 
+        &.@{tab-prefix-cls}-card > .@{tab-prefix-cls}-bar .@{tab-prefix-cls}-tab-active{
+              color: @primary-color;
+        } 
+       &-extra-content {
+        .@{tab-prefix-cls}-new-tab {
+               color: #fff;
+        }
+      }
+
+}

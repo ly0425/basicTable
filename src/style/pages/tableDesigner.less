@@ -1,0 +1,506 @@
+// TableControl.css 去掉了原来的icon
+body{margin: 0; padding:0;overflow: hidden;}
+#root,.table-wrap{width: 100%; height: 100%;position: relative}
+.table-box{border-collapse: collapse;outline: none}
+.th-box{text-align: center; position: relative; border:1px solid @newtable-border-color;}
+.td-box{text-align: center; position: relative; border:1px solid @newtable-border-color;}
+.thead-box{
+  // background: #C1CCD2 ;
+  tr{
+    background: @spreadsheet-tbody-bg;
+  }
+}
+.tbody-box{background: @dynamic-tbody-bg;}
+.tfoot-box{background: @dynamic-tfoot-bg;}
+.column-line{width: 10px; height: 100%; position: absolute; right: -5px; top: 0; background: transparent; cursor: col-resize; z-index: 9;}
+.row-line{width: 100%; height: 10px; position: absolute; left: 0; bottom: -5px; background: transparent; cursor: row-resize; z-index: 9;}
+.select{background: rgba(13,112,255,0.20);border-bottom: 1px solid #0D70FF;}
+.table-content{padding:30px 0 0 30px; position: relative; float: left;
+  color: @color-second-title-white-toggle;
+      border: 1px solid transparent;
+}
+.table-block{width: 31px; height: 31px; position: absolute; left: 0; top: 0; border:1px solid @spreadsheet-line;
+background: @spreadsheet-thead-bg; cursor: move;}
+.column-block{position: absolute; left: 30px; top: 0; border: 1px solid @spreadsheet-line; border-right:none;
+  background: @spreadsheet-thead-bg; height: 31px; z-index: 1;}
+.column-block p{float: left; height: 28px; line-height: 28px;
+  background: @spreadsheet-thead-bg; text-align: center; position: relative; border-right: 1px solid @spreadsheet-line;}
+.row-block{position:
+absolute; left: 0; top: 30px; border: 1px solid @spreadsheet-line; border-bottom:none; border-right: none; width: 30px;}
+.row-block p, .row-block > div{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid @spreadsheet-line;
+  background: @spreadsheet-thead-bg;
+}
+.row-block .selected-table-header, .column-block .selected-table-header {
+  background-color: @spreadsheet-thead-selected-bg !important;
+}
+.row-margin{margin:0 0 0;}
+.tablePad {
+  border: solid 1px @newtable-border-color;
+}
+.tablePad .ant-table-footer{
+  padding: 0px;
+  background: transparent;
+  border:0px;
+  .ant-table{
+    border: 0px solid;
+    border-radius: 2px;
+  }
+}
+.tablePad .ant-table-title{
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom:1px solid @tablePad-border-color;
+}
+#tableDiv .tablePad  .ant-table-fixed-left{
+  /*overflow: visible;*/
+
+  // width: auto;
+  background: #fff;
+}
+.tablePad .ant-table table{
+  /*overflow: visible;*/
+  border-collapse: separate;
+  width: 100%;
+  table-layout: fixed;
+}
+.tablePad .ant-table table thead tr{
+  background:@table-tr-bg;
+  th{
+    font-size: 14px;
+    color: @table-head-font-color;
+    font-weight: bold;
+    border-top: none;
+  }
+}
+.tablePad .ant-table table td{
+  color:@table-head-font-color;
+}
+.tablePad .ant-table-footer{
+  // border-top: 1px solid @newtable-border-color;
+  border-top: 1px solid transparent;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+}
+.tablePad .ant-table-content{
+  //border-top:1px solid @tablePad-border-color;
+  border-radius: 2px;
+}
+.tablePad .ant-table{
+  border-radius:0px;
+  border: none;
+    .anticon-caret-down{
+        display: block;
+    }
+}
+.tableFooter .ant-table-footer{
+  border-top:0px;
+  border-bottom: 0px solid #e9e9e9;
+}
+.tablePad .ant-table-footer:before{
+  background:rgba(250,250,250,0.34);
+}
+.tableFooter .ant-table-content{
+  border:0px;
+}
+ .tablePad .ant-table-tbody > tr > td{
+   padding:0;
+   /*word-break:break-word;*/
+   word-break:break-all;
+   height: 0px;
+    border-right: 1px solid @newtable-border-color;
+    border-bottom:  1px solid @newtable-border-color;
+ }
+.tablePad .ant-table-thead > tr > th{
+  padding:0;
+  border-right: 1px solid @newtable-border-color;
+  border-bottom: 1px solid @newtable-border-color;
+}
+.tablePad .ant-table-thead>tr{
+  height: auto;
+}
+/*css代码*/
+#menu{
+  z-index: 999;
+  overflow: hidden; /*隐藏溢出的元素*/
+  position: fixed; /*自定义菜单相对与body元素进行定位*/
+}
+
+// Property.css
+.div{
+  width:auto;
+  height:auto;
+  border:1px solid #ebcbbe;
+  margin-bottom:20px;
+  border-radius:5px;
+}
+.Checkbox{
+  border:1px solid #ebcbbe;
+  height:200px;
+  width:100px;
+  margin-left: 20px;
+  overflow:auto;
+}
+.title{
+  display:block;
+  width:30%;
+  height:20%;
+  position:relative;
+  top:-13px;
+  text-align: center;
+  background:white;
+}
+
+// tableCss.css
+.margin{
+  margin-left:35px;
+  margin-right:35px;
+}
+.operationDivCss{
+  border-radius: 3px;
+  width:21.6px;
+  height:22px;
+  border:1px solid #ebcbbe;
+}
+.w76{
+  width: 55px;
+  height: 30px;
+}
+.divCss{
+  height: 40px;
+  margin-right: 16px;
+  color: @color-second-title-white-toggle;
+  .ant-btn{
+    height: 30px;
+  }
+}
+
+// WatermarkArea.css
+.WaterMarkPrintHeaderArea:after{
+    content: '打印头区';
+    display: block;
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    right:20px;
+    bottom: 0px;
+    text-align: right;
+    color:#B6B7BC;
+    font-size:20px;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+.WaterMarkPrintHeaderArea{
+    position: relative;
+}
+
+.WaterMarkPrintFooterArea:after{
+    content: '打印尾区';
+    display: block;
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    right:20px;
+    bottom: 0px;
+    text-align: right;
+    color:#B6B7BC;
+    font-size:20px;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+.WaterMarkPrintFooterArea{
+    position: relative;
+}
+
+.WaterMarkDynamicTableBodyArea:after{
+    /*content: '表体区';*/
+    display: block;
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    right:20px;
+    bottom: 0px;
+    text-align: right;
+    color:#B6B7BC;
+    font-size:20px;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+.WaterMarkDynamicTableBodyArea{
+    position: relative;
+}
+
+.WaterMarkPageHeaderArea:after{
+    content: '页眉区';
+    display: block;
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    right:20px;
+    bottom: 0px;
+    text-align: right;
+    color:#B6B7BC;
+    font-size:20px;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+.WaterMarkPageHeaderArea{
+    position: relative;
+}
+
+.WaterMarkPageFooterArea:after{
+    content: '页脚区';
+    display: block;
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    right:20px;
+    bottom: 0px;
+    text-align: right;
+    color:#B6B7BC;
+    font-size:20px;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+.WaterMarkPageFooterArea{
+    position: relative;
+}
+
+.tablepreview .ant-table-tbody > tr {
+  background: transparent;
+ }
+.tablepreview .ant-table-theader > tr {
+  background: transparent;
+ }
+.tablepreview .ant-table-tfooter > tr {
+  background: transparent;
+ }
+.tablepreview .ant-table-header{
+  background: transparent;
+  /*border-bottom:1px solid @newtable-border-color!important;*/
+ }
+
+.tablepreview .ant-table-row-expand-icon {
+  background-color: transparent;
+ }
+
+ //table 的表达式编辑器
+.table-expression-editor-tree{
+  width:100%;
+  height:200px;
+  border:1px solid @spreadsheet-line;
+  border-radius:5px;
+  overflow:auto;
+  .ant-tree{
+    width: 95%;
+  }
+}
+.table-expression-editor-instruction{
+  width:100%;
+  height:85px;
+  border:1px solid @spreadsheet-line;
+  margin-bottom:20px;
+  border-radius:5px;
+  .instruction-title{
+    width:30%;
+    height:20%;
+    position:relative;
+    top:-13px;
+    left: 10px;
+    text-align: center;
+    background: @bg-white-dark-modal-toggle;
+  }
+}
+#liTable, #matrix{
+  height: 30px;
+  line-height: 30px;
+  color: @color-second-title-white-toggle;
+  &:hover{
+    color: @litable-hover-color;
+    // border-right: 2.3px solid @litable-hover-color;
+  }
+}
+
+.table-model-container{
+  height: calc(~'100vh - 63px');
+  width: 100%;
+}
+
+.spreadsheet-model-container {
+  height: calc(~'100% - 32px');
+  // margin-top: -46px;
+  // padding-top: 46px;
+  width: 100%;
+}
+
+.tableProForm{
+  .ant-form-item{
+    margin-bottom: 0px;
+  }
+  .ant-input-number{
+    height: 30px;
+    &.set-main-title{
+      margin-top: 3px;
+    }
+    .ant-input-number-input{
+      color: @color-third-title-white-toggle;
+    }
+  }
+
+  .ant-form-item-label label{
+    font-size: 12px;
+    color: @color-second-title-white-toggle;
+  }
+  .ant-form-item-control-wrapper{
+    .ant-input{
+      font-size: 12px;
+    }
+  }
+}
+.ant-select-search__field__wrap .ant-input.ant-select-search__field{
+  border-radius:0px!important;
+}
+.ant-select-auto-complete.ant-select .ant-input{
+  border-radius:0px!important;
+}
+.pageTotal{
+  color: @color-pageTotal;
+}
+.ant-table-placeholder{
+  background-color: transparent;
+}
+.ant-table-table-no-data{
+  .no-data-title{
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  font-size: 47px;
+  text-align: center;
+  line-height: 1;
+  padding: 36px 0px;
+  cursor: default!important;
+}
+.table-dragTh{
+  position: relative;
+}
+.table-Drag-p{
+  position: absolute;
+  top: 0px;
+  z-index: 9999;
+  height: 100%;
+  border-left:  2px solid transparent;
+  border-right:  2px solid transparent;
+  &:hover{
+    border-left: 2px dotted rgb(17, 17, 17);
+    border-right: 2px dotted rgb(17, 17, 17);
+    cursor: e-resize;
+  }
+
+}
+.dynamicForm .ant-table-tbody > tr > td span{
+  color:inherit;
+  padding-right:3px;
+}
+.table-head-foot .table-colors{
+  color:@table-head-font-color;
+}
+.ant-table-fixed-left table, .ant-table-fixed-right table{
+  background: none;
+}
+.table-wrap-css .ant-table-fixed{table-layout: fixed;}
+.ant-table-pagination.ant-pagination{
+  margin:12px 0;
+}
+.datatable-sql{max-height: 120px;overflow: auto;}
+.table-Pagination-input .ant-input {
+  height: 25px;
+}
+.dynamicForm .ant-table-body{
+  // border-bottom: 1px solid #ddd;
+  border-bottom: none;
+  background:transparent;
+}
+#queryPlan {
+  height: 100%;
+  .ant-tabs{
+    overflow:visible;
+  }
+  .ant-tabs-line{
+    height: 100%;
+    .ant-tabs-content{
+      height: 100%;
+      .ant-tabs-tabpane-active{
+        height: 100%;
+        .expressionEditor .ant-row{
+          height: 100%;
+          .ant-col-6,.ant-col-18{
+            height:100%;
+          }
+          .rightContent{
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            padding: 10px;
+            .ant-row{
+              height: auto;
+              .ant-col-6,.ant-col-18{
+                height:auto;
+              }
+            }
+            .divCss{
+              line-height: 40px;
+              padding-left: 15px;
+              margin-top: 8px;
+              .w76{
+                width: 130px;
+                text-align: right;
+              }
+              .w7{
+                width: 120px;
+                text-align: right;
+              }
+              .rightItem{
+                float: left;
+                margin-left: 8px;
+              }
+            }
+          }
+          .queryPlanItem{
+            height:100%;
+            // overflow-y: auto;
+            .ant-list-item{
+              height: 30px;
+              padding-left: 8px;
+            }
+
+            .item{
+              cursor: pointer;
+              width: 100%;
+              overflow: hidden;
+              text-align: center;
+            }
+            .item.active{
+              background: #d5e8f7;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+.iconActive{
+  border: 1px solid #1890ff;
+}

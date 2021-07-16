@@ -1,0 +1,233 @@
+
+.dashboard-model-wrap{
+       .ant-tabs-tabpane-inactive{
+          .menu-oprate{display: none;}
+      }
+      .intuitive-way-condition{margin-bottom: 0;}
+      .vertical-line{width: 1px;}
+      .react-grid-item{
+        background: #fff; 
+      }
+      .dashboard-right-part{
+        height: calc(~'100vh - 70px');
+        background:#f0f2f5;
+        display: flex;flex-direction:column;
+        .dashboard-right-con{ 
+          flex-grow:2;
+          height: calc(~'100vh - 102px'); 
+          display: flex;
+          flex-direction: column;
+        }
+        .dashboard-css{
+          height: 100%;
+          padding: 10px;width: 100%;
+        }
+      }
+      .dash-board-new-grids{
+        overflow: auto;
+        flex-grow:2;
+      }
+      .react-grid-layout{
+        background:none;
+      }
+      .right-top{position: absolute;top:4px;right:4px;cursor: pointer;
+        .iconfont{font-size: 12px;margin: 0 4px;}
+        color: #666;
+      }
+      .dashboard-main-con{
+        position: relative;
+        height: 100%;
+      }
+      .grid-img-content{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(20, 70px);
+        position: absolute;
+        width: inherit;
+        height:inherit ;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        min-height: 100%;
+      }
+      .grid-img-item{ 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #eee;
+          border-radius:0;
+          font-size: .8em;
+          min-height: 50px;
+          color: #f0f0f3;
+          background-color: #e6e5e5; 
+          box-sizing: border-box;
+      }
+      .grid-img-item-div{
+        background-color: #ecebeb; 
+      }
+      .dashboard-main-con-grid{
+        position: relative;z-index: 3;min-height:100%;
+         >.react-grid-layout{z-index: 8;}
+      }
+      .dashboard-item{
+        display: flex;flex-direction: column;
+      }
+      .dashboard-item-title{
+        padding:0 10px;font-size: 12px;
+        color: #333; 
+        height: 30px;
+      }
+      .dashboard-item-title-text{
+        padding:8px 0;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;padding-right: 100px;
+      }
+      .dashboard-item-line{
+        height: 1px;
+        background: #dedede; 
+      }
+      .dashboard-item-con{
+        flex-grow: 1;
+      }
+      .dashboard-item-select{
+        border:1px solid #00f;
+      }
+}
+
+
+.react-grid-layout {
+  position: relative;
+  transition: height 200ms ease;
+}
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top;
+}
+.react-grid-item img {
+  pointer-events: none;
+  user-select: none;  
+}
+.react-grid-item.cssTransforms {
+  transition-property: transform;
+}
+.react-grid-item.resizing {
+  z-index: 1;
+  will-change: width, height;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 3;
+  will-change: transform;
+}
+
+.react-grid-item.dropping {
+  visibility: hidden;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: red;
+  opacity: 0.2;
+  transition-duration: 100ms;
+  z-index: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.react-grid-item > .react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.react-grid-item > .react-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.react-resizable-hide > .react-resizable-handle {
+  display: none;
+}
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-sw {
+  bottom: 0;
+  left: 0;
+  cursor: sw-resize;
+  transform: rotate(90deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-se {
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-nw {
+  top: 0;
+  left: 0;
+  cursor: nw-resize;
+  transform: rotate(180deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-ne {
+  top: 0;
+  right: 0;
+  cursor: ne-resize;
+  transform: rotate(270deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-w,
+.react-grid-item > .react-resizable-handle.react-resizable-handle-e {
+  top: 50%;
+  margin-top: -10px;
+  cursor: ew-resize;
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-w {
+  left: 0;
+  transform: rotate(135deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-e {
+  right: 0;
+  transform: rotate(315deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-n,
+.react-grid-item > .react-resizable-handle.react-resizable-handle-s {
+  left: 50%;
+  margin-left: -10px;
+  cursor: ns-resize;
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-n {
+  top: 0;
+  transform: rotate(225deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-s {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+.dashboard-setting-new{
+  z-index: 850;    height: calc(~'100% - 50px');width: 310px;right: 1px;border-top:1px solid #ccc;
+  border-bottom:1px solid #eee;
+} 
+.dashboard-setting-new{ 
+  .ant-select-selection-single{height: 32px}
+  .ant-form-item-label label:after{content: ""}
+   .sketch-picker-common{
+      position: absolute;
+      z-index: 111;
+      top: 30px;
+      right: -80px;
+  }
+ .bg-color-chooser-trigger-content{background-color: initial;}
+ .ant-form-item-label{
+  text-align: left;
+}
+.ant-input-group-addon{padding:0;}
+.ant-input-group-addon span{cursor: pointer;padding:4px 10px 8px 10px;display: inline-block;}
+}  
+

@@ -1,0 +1,127 @@
+/*oes下左侧/顶部导航不显示 */
+.hide-nav .sider___37WR7.ant-layout-sider{
+    display: none !important;
+}
+.hide-nav .header___nFAzz.ant-layout-header{
+   visibility: hidden;display: none !important;
+}
+ .hide-nav >div >div{ height: calc(100vh) !important;}
+  .hide-nav  >div >div >div{
+         min-height: calc(~'100vh - 196px');
+  }
+/* .hide-nav  .vadp_contentWrapper{background: #eaf0f3 !important}
+.hide-nav  .vadp_contentWrapper >div{background: #fff;}  */
+
+.bi-ant-confirm-confirm  .ant-modal-body{padding-bottom: 16px !important}
+.bi-ant-confirm-confirm  .ant-confirm-body .ant-confirm-title{display: inline;}
+//bootstrap增强 保留
+.fade.in{opacity: 1}
+.modal-backdrop{background-color: rgba(0, 0, 0, 0);position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040}
+.fade {
+    opacity: 0;
+}
+.form-horizontal .form-group:after{
+    content: " ";
+    display: table;
+}
+.form-horizontal .form-group:after {
+    clear: both;
+}
+.form-horizontal .control-label {
+        text-align: right;
+        margin-bottom: 0;
+        padding-top: 7px
+    }
+
+//bootstrap增强 临时
+
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    content: " ";
+    display: table;
+}
+.btn-group-vertical>.btn-group:after,.btn-toolbar:after,.clearfix:after,.container-fluid:after,.container:after,.dl-horizontal dd:after,.form-horizontal .form-group:after,.modal-footer:after,.modal-header:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after,.pager:after,.panel-body:after,.row:after {
+    clear: both
+}
+@media (min-width: 768px) {
+    .col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9 {
+        float:left
+    }
+}
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
+    padding-left: 12px;
+    padding-right: 12px
+}
+a{outline: none}
+
+
+.ant-tabs-tab{
+    color: @font-label-color
+}
+.ant-modal-close-x{
+    width: 20px;
+}
+
+.ant-table-bordered .ant-table-tbody>tr>td.ant-table-column-has-filters.ant-table-column-sort{
+    height: 32px;
+}
+
+.auditFormulaResults .ant-table-expanded-row .ant-table-thead > tr > th{
+    background: none;
+    border-top: 1px solid #e8e8e8;
+}
+
+
+.bi-table-head-menu{
+      ul li{
+          padding: 0;
+          .bi-table-head-menu-li-common,>div{padding: 5px 12px;}
+          .bi-table-head-menu-select{background:@b-custom-select-item-hover-bg}
+          &.bi-dashboard-title-menu{
+            padding:0 10px;
+        }
+      } 
+
+  }
+
+  .bi-tree{
+    .anticon-search svg,
+    .anticon-minus-square svg,
+    .anticon-file svg,
+    .anticon-plus-square svg,
+    .ant-collapse svg,
+    .ant-table-column-sorter svg,
+    .anticon-close svg,
+    .ant-calendar-picker-icon svg,
+    .anticon-arrow-up svg,
+    .anticon-arrow-down svg,
+    .ant-select-switcher-icon svg,
+    .custom-flex svg,
+    .ant-message svg,
+    .ant-calendar-picker-clear svg,
+    .common-use-fold-btn svg,
+    .ant-cascader-picker-clear svg,
+    .ant-cascader-picker-arrow svg,
+    .anticon-plus-circle svg,
+    .anticon-minus-square
+    {
+        display: none;
+    }
+}
+// .ant-tree.ant-tree-show-line li span.ant-tree-switcher.ant-tree-switcher_open:after{
+//     display: none;
+// }
+// .ant-tree.ant-tree-show-line li span.ant-tree-switcher.ant-tree-switcher_close:after{
+//     display: none;
+// }
+.action-icon-common .iconfont{margin-right: 3px;}
+.parameter-type-modal {
+    .ant-input-number{
+        width: 100%;
+    }
+}
+.kpi-xz-icon{width: 100px;opacity:0.75}

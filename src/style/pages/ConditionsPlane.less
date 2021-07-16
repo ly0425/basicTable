@@ -1,0 +1,355 @@
+#tabsCon .intuitive-way-condition {
+  margin-bottom: 0px;
+}
+.intuitive-way-condition { /*平铺专属class*/
+        position: relative;z-index: 200;
+        color: @color-second-title-white-toggle;
+        margin-bottom: 8px;
+        .fast-select-date{
+          margin-left: 10px;display: inline-block;
+            .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+                color: #fff;
+                background: #1890ff;
+                border-color: #1890ff;
+            }
+        }
+        .common-use-list {
+          background: @dashboard-main-background ;
+          overflow: hidden;
+          padding: 8px 0 4px 0;
+          }
+         .ReferenceInfoRef  .ant-select-selection__placeholder{height: 30px;}
+         .ExternalReference,.ReferenceInfoRef{ 
+           height:30px;overflow:hidden;
+           .ant-select-selection--multiple .ant-select-selection__rendered {
+                overflow: hidden;
+            }
+            .ant-select-selection--multiple .ant-select-selection__rendered ul {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow: hidden;
+                float: left;
+            }
+            .ant-select-selection--multiple .ant-select-selection__choice {
+                float: none;
+                overflow: visible;
+            }
+            .ant-select-selection--multiple .ant-select-search--inline {
+                float: none;
+                position: absolute;
+            }
+            .ant-select-selection--multiple {
+                max-height: 32px;
+                overflow: hidden;
+            }
+            .ant-select-focused{
+              .ant-select-selection__choice{
+                opacity: 0.5;
+              }
+            }
+         }
+         .conditionComponent-plane{
+            .all-display-none{
+              display: none;
+            }
+             .ant-cascader-picker,.ant-select-selection{background: none} /*背景颜色透明*/
+             .field-operation{
+                  margin-left: 8px;
+              }
+              .field-name { /*特殊字段，显示*/
+                      >.ant-select{width: 100% !important} 
+                }
+              .inputTextWrap {
+                /*BI-972*/
+                 min-width: 180px;
+                 width: auto;
+              } 
+                 .inputTextCss {
+                      width: 100% !important;
+                      vertical-align: top;
+                      display: flex;
+                      align-items: center;
+                      .treeref{
+                        line-height: 0.8;
+                      }
+                  
+                }
+                .FormItems{
+                     .Field-Operation-InputText{white-space: nowrap;}
+                }
+                .group{/*组*/
+                      margin-bottom: 8px;
+                      .group-title { 
+                        padding-left: 8px;
+                        display: inline-block;
+                        text-align: right;
+                        padding-right: 0;
+                        padding-top: 8px;
+                        white-space: nowrap; 
+                        overflow: hidden;
+                        text-overflow: ellipsis;float: left; width: 87px;
+                      }
+                      .group-name{width: auto;}
+                      .FormItems {
+                        margin-left: 87px;
+                            display: flex;
+                          align-content: flex-start;
+                          flex-wrap: wrap;
+                        .field-operation-list {
+                          margin-bottom: 8px;
+                          .field-name{display: none}
+                        }
+                      }
+                      
+                }
+                .ant-select-selection-selected-value {
+                  height: 36px;
+                  line-height: 30px;
+                }
+         }
+         .ant-input{height: auto;}
+          .field-operation-none {
+              .conditionComponent-plane{ /*不显示*/
+                .field-operation { /*不显示*/
+                    display: none;
+                  }
+              }
+              .DataChainshow{
+                display: block!important; 
+              }
+        }
+        .conditionComponent-plane {
+          .field-name .conditionModal-ellipsis{width: auto !important;max-width: 87px;}
+          .condition-group-plane:not(:first-of-type){
+            // border-top: 1px dashed @fieldset-border;
+          }
+          .Field-Operation-InputText-special-plane{
+              display: flex;margin-left:8px;
+              align-content: flex-start;
+              flex-wrap: nowrap; 
+              .hiddenTBHB{ display: none !important;}
+          }
+          .conditions-plane{
+            .condition-group-plane { 
+                margin-bottom: 0px;
+                margin-top: 0 !important;
+                display: flex;
+                align-content: flex-start;
+                flex-wrap: wrap;
+                  >ul{
+                          margin-bottom: 8px !important;
+                          margin-right: 16px;
+                  }
+                  .mgb8{
+                    margin-bottom: 0;
+                  }
+                 &:first-child {
+                    padding-right: 150px;
+                  }
+                  &:last-child {
+                    border-bottom: none;
+                    margin-bottom: 0px;
+                  }
+            }
+           
+          }
+        
+        
+          .public-style-common {
+            padding: 8px 0;
+          }
+          
+          .ant-select-selection__placeholder { 
+            height: 30px
+          }
+        
+          .groupBoxContent {
+            overflow: auto;
+            height: 100%;
+            width: 100%;
+            margin-top: -22px;
+            padding: 28px 8px 8px 8px;
+        
+          }
+        
+        
+          .numberText {
+            margin-right: 0;
+            vertical-align: middle
+          }
+        
+          .required-btn,
+          .commonUse-btn {
+            margin-left: 8px;
+            margin-right: 0;
+          }
+        
+        
+          .commonUse-btn {
+            display: inline;
+            vertical-align: middle;
+        
+          }
+        
+          .delete-btn {
+            vertical-align: middle;
+            margin-left: 8px
+          }
+        
+          .inputTextCss {
+            width: 100%;
+            vertical-align: top;
+            display: flex;
+            align-items: center;
+            .treeref{
+              line-height: 0.8;
+            }
+         
+          }
+        .select-range {
+          display: flex;
+          .ant-select{
+             width: 40%;
+             .ant-select-selection--single{
+               width: 100%;
+             }
+          }
+        }
+          .field-operation {
+            margin-left: 8px;
+            vertical-align: middle
+          }
+         
+          .createFormItemsRange{
+            .FormItems {
+              min-height: 32px;
+              display: inline-block;
+            }
+          }
+          .conditions-plane {
+           
+        
+            li {
+              .FormItems {
+                min-height: 32px; 
+                display: inline-block;
+              }
+        
+        
+            }
+        
+            .group { 
+              .group-label { 
+                display: inline-block;
+                .group-name{
+                  overflow: hidden;
+                  height: 24px;
+                  text-overflow: ellipsis;
+                  width: 100%;
+                  white-space: nowrap;
+                  text-align: left;
+        
+                }
+              }
+        
+              .FormItems {
+                height: auto; 
+              }
+            }
+          }
+        }
+        
+  }
+
+   .common-use-list-flod {
+        height: 46px;
+
+        .conditions-plane>div {
+
+          .mgb8 {
+            margin-bottom: 20px !important;
+          }
+        }
+
+        .conditions-plane {
+          .group {
+            .FormItems .field-operation-list {
+              margin-bottom: 20px !important;
+            }
+          }
+        }
+      }
+
+      .common-use-btn {
+        position: absolute;
+        right: 16px;
+        top: 12px;
+
+        button {
+          float: none
+        }
+      }
+
+      .common-use-fold-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 5px;
+        text-align: center;
+        right: 64px;
+        width: 56px;
+        height: 18px;
+        font-size: 12px;
+        button {
+          float: none 
+        }
+      }
+
+.intuitive-way-condition-popup,.one-way-condition-popup{ /*弹层*/
+       margin-bottom: 0;
+      .common-use-btn{top:0;}
+      .common-use-list{padding:0;background: none}
+      .conditionComponent-plane{
+        .field-name .conditionModal-ellipsis{width: auto !important;max-width: 87px;}
+        .conditions-plane ul{margin-right: 16px;}
+        .Field-Operation-InputText-special{
+           margin-left: 0px;
+          .field-name{width: auto !important;}
+          .hiddenTBHB{margin-top: 6px;}
+          } 
+        
+      }
+      
+}
+.one-way-condition-popup{  /*只有一行*/
+    padding-left: 16px !important;
+    height: 48px!important; 
+}
+.dashboardPopup{
+  .one-way-condition-popup{ 
+    padding-left: 0px !important;
+  }
+}
+.forReport{
+  .common-use-list{
+    padding: 3px 0 1px;
+  }
+  .common-use-list-flod{
+     height: 38px;
+  }
+  .common-use-btn{
+    top:4px;
+  }
+  .conditionComponent-plane .conditions-plane .condition-group-plane>ul{
+    margin-bottom: 4px !important;
+  }
+  .conditionComponent-plane .group{
+    margin-bottom: 4px !important;
+  }
+  .conditionComponent-plane .ant-select-selection-selected-value{
+    height: 30px;
+  }
+  .ant-btn{height: 28px;padding: 0 8px;}
+  margin-bottom: 0;
+}
+
+

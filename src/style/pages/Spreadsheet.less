@@ -1,0 +1,345 @@
+@size: 26;
+.toolbar {
+  position: relative;
+  // height: unit(@size + 4, px);
+  // width: calc(~'100% - 12px');
+  // －改在IE上有问题都挤到一起来position: absolute;
+  z-index: 0;
+  padding: 12px 0 12px 12px;
+  // top: 10px;
+  // left: 14px;
+  .toolitem {
+    border: solid 0px @table-toolitem-border;
+    color: @spreadsheet-toolbar-item-color;
+    display: inline-block;
+    margin: 0 0 0 8px;
+    padding: 2px;
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+      border-color: @table-toolitem-hover-border-color;
+      position: relative;
+      color: @icon-hover-color;
+      i {
+        color: @icon-hover-color;
+      }
+    }
+    &-checked {
+      position: relative;
+      z-index: 10;
+      background-color: #C6C6C6;
+    }
+    &-header {
+      margin-left: 5px;
+    }
+  }
+  .toolitem-header {
+    margin-left: 8px;
+  }
+  .ant-dropdown-button {
+    margin-right: 6px;
+    .ant-btn {
+      background-color: transparent;
+      height: 25px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .ant-dropdown-trigger {
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+    }
+  }
+  .w76 {
+    width: 55px;
+    height: 30px;
+  }
+  .divCss {
+    color: @color-second-title-white-toggle;
+    display: inline-block;
+  }
+  .toolitem[disabled] {
+    color:#b7b7b7 !important;
+    .icon{
+      color:#b7b7b7 !important;
+    }
+  }
+}
+
+.spreadsheet-model {
+  .spreadsheet-need-save {
+    color: red;
+  }
+  .setting-board {
+    .divCss {
+      height: auto;
+      min-height: 40px;
+      > .bi-colorPicker-wrapper {
+        padding-top: 6px;
+      }
+    }
+    .border-settings {
+      .bi-colorPicker-wrapper {
+        display: inline-block;
+        .bi-colorPicker-popover {
+          right: 0;
+        }
+      }
+    }
+  }
+  .spreadsheet-little-icon {
+    .anticon {
+      font-size: 100%;
+    }
+  }
+  .spreadsheet-toolbox {
+    .ant-collapse-item-active {
+      height: calc(~'100% - 46px');
+      .ant-collapse-content-active {
+        height: calc(~'100% - 46px');
+        .ant-collapse-content-box {
+          height: 100%;
+          .dimensionInfo{
+            .ant-collapse-header{
+              padding: 2px 0 2px 2em;
+            }
+            .ant-collapse-header .arrow{
+              line-height:25px;
+              left: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .Pane.vertical.Pane2  {-ms-flex: 1 1 0%;}
+}
+
+.spreadsheet-design {
+  @height: @size+4;
+  position: relative;
+  // top: 18px;
+  // left: 24px;
+  margin-left: 12px;
+  height: calc(~'100% - 56px');
+  // max-height: calc(~'100% - 87px');
+  // width: calc(~'100% - 48px');
+  // max-width: calc(~'100% - 48px');
+  overflow: auto; // .table-box {
+  //   background: @spreadsheet-tbody-bg;
+  // }
+}
+
+.table-wrap .ant-spin{position: absolute; left: 50%; top: 50%; margin-left: -58px; margin-top: 31px; z-index: 999;}
+
+
+.spreadsheet-design-fold{
+  // height: calc(~'100% - 266px') !important;
+  // height: calc(~'100% - 357px') !important;
+  height: calc(~'100% - 258px') !important;
+}
+
+.spreadsheet-info-box{
+  position: relative;
+  // top: 28px;
+  // left: 24px;
+  // width: calc(~'100% - 48px');
+  // max-width: calc(~'100% - 48px');
+  margin: 6px 0 0 12px;
+  overflow: auto;
+}
+.spreadsheet-info-box .ant-tabs-bar{margin-bottom:7px !important;}
+.spreadsheet-info-box .ant-tabs-nav-container{height:30px !important;}
+.spreadsheet-info-box .ant-tabs-tab{line-height: 28px !important;}
+.spreadsheet-info-box .ant-table-thead>tr{height:36px !important;}
+.spreadsheet-info-panel-box{
+  height: 128px;
+  width: calc(~'100% - 54px');
+  position: relative;
+}
+
+.spreadsheet-preview {
+  tr {
+    background-color: @spreadsheet-preview-bg;
+    .th-box {
+      border-color: @spreadsheet-preview-line;
+    }
+  }
+}
+
+.excel-header .designer-header-tool {
+  width: 15%;
+}
+
+#DynamicTableBody {
+  color: @color-second-title-white-toggle;
+}
+
+// 表格中文本框
+.textbox-for-table {
+  color: @spreadsheet-preview-font;
+  .run-add-animation {
+    animation: add-animation 0.2s 1;
+  }
+  .run-del-animation {
+    animation: del-animation 0.3s 1;
+  }
+  @keyframes add-animation {
+    from { transform: translateY(-30px); }
+    to { transform: translateY(0); }
+  }
+  @keyframes del-animation {
+    0% { transform: translateY(0); visibility: visible; opacity: 1; }
+    66.67% { transform: translateY(30px); visibility: visible; opacity: 1; }
+    100% { transform: translateY(30px); visibility: collapse; opacity: 0; }
+  }
+}
+
+.ewa-gridKeyHandler {
+  background-color: @spreadsheet-input-bg;
+}
+
+.oes-function-root {
+  max-height: calc(~'100vh - 150px');
+  overflow-y: auto;
+}
+
+.spreadsheet-runtime {
+  .spreadsheet-design {
+    // height: calc(~'100% - 107px');
+    // height: calc(~'100% - 184px');
+    height: calc(~'100% - 87px');
+  }
+}
+
+.index-model-manager {
+  .bi-left-part {
+    height: calc(~'100vh - 300px') !important;
+  }
+}
+
+.spreadsheet-model-in-modal {
+  .designer-header-tool {
+    padding-right: 20px;
+  }
+}
+
+.budget-template{
+  .header-div {
+    display: none;
+  }
+  .spreadsheet-model-container {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .spreadsheet-design {
+    height: calc(~'100% - 60px');
+    max-height: calc(~'100% - 60px');
+  }
+  .printBodyArea_control {
+    height: 100% !important;
+  }
+  .setting-board {
+    top: 0;
+    height: 100%;
+  }
+}
+
+.budget-runtime {
+  .header-div {
+    display: none;
+  }
+  .toolbar {
+    top: 10px;
+    left: 2px;
+  }
+  .spreadsheet-design {//编制出不来，多减一点
+    height: calc(~'100% - 94px') !important;
+    max-height: calc(~'100% - 94px') !important;
+    width: calc(~'100% - 15px') !important;
+    max-width: 100% !important;
+    top: 15px;
+    left: 3px;
+  }
+  .cell-disabled {
+    background-color: lightgray !important;
+  }
+}
+
+.budget-task {
+  .table-block, .column-block, .row-block {
+    display: none;
+  }
+}
+
+.specialExcel{
+  width: 100%;
+  height: 335px;
+  overflow-y: auto;
+  margin-top: 6px;
+  .ant-list-sm .ant-list-item{
+    padding: 0;
+    border: none;
+    .dragSpecialExcel{
+      width: 184px;
+      overflow-x: hidden;white-space: nowrap;text-overflow: ellipsis;
+      padding: 1px 4px;
+      box-sizing:border-box;
+      cursor: pointer;
+    }
+  }
+}
+.specialExcelContainer{
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  width: 100%;
+  height: 460px;
+  // margin-top:5px;
+  // margin-left:10px;
+}
+.budgetSpecialExcel{
+  height:465px;
+}
+.ant-modal-footer{
+  padding-top: 4px;
+}
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 4px 11px;
+}
+// .auditFormulaResults{
+//   .ant-table-placeholder{
+//     margin-top: 81px;
+//     padding-bottom: 80px;
+//   }
+// }
+// #auditList{
+//   .ant-table-header::-webkit-scrollbar,.tablebody::-webkit-scrollbar {
+//     /*滚动条整体样式*/
+//     width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+//     height: 1px;
+    
+//     }
+// .ant-table-header::-webkit-scrollbar-thumb,.tablebody::-webkit-scrollbar-thumb {
+//     /*滚动条里面小方块*/
+//     border-radius: 10px;
+//     box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+//     background   : #535353;
+//     }
+// .ant-table-header::-webkit-scrollbar-track,.tablebody::-webkit-scrollbar-track {
+//     /*滚动条里面轨道*/
+//     // box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+//     border: 1px solid #ddd;
+//     // border-radius: 10px;
+//     background   : #fff;
+//     }
+// }

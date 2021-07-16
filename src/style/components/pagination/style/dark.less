@@ -1,0 +1,178 @@
+//@import "../../style/themes/dark";
+//@import "~antd/lib/style/mixins/index";
+//@import "~antd/lib/input/style/index";
+//@import "~antd/lib/pagination/style/index";
+//自定义圆角标签
+@pagination-radius:50%;
+@pagination-prefix-cls: ~"@{ant-prefix}-pagination";
+.@{pagination-prefix-cls} {
+  &.mini &-item {
+    border:1px solid @border;
+    min-width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 5px;
+
+    &-active {
+      border:1px solid @blue-6;
+    }
+
+  }
+
+  &-total-text {
+    color:@text-color;
+  }
+
+  &-item {
+    background: transparent;
+    color: @text-color;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    a {
+      vertical-align: top;
+    }
+
+    &-active {
+      color: #17CBDD;
+      // background:@blue-6;
+      border-color:#17CBDD;
+    }
+    &:focus, &:hover {
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      border-color: @primary-color;
+      a{
+        color:@primary-color;
+      }
+    }
+  }
+
+  &-prev,
+  &-next,
+  &-jump-prev,
+  &-jump-next {
+    background: transparent;
+    color: @white7;
+  }
+  &-jump-next:after, &-jump-prev:after{
+    color:inherit;
+  }
+  &-prev,
+  &-next {
+    outline: 0;
+
+    a {
+      color: @text-color;
+      user-select: none;
+    }
+
+    &:hover a {
+      border-color: @primary-5;
+    }
+
+    .@{pagination-prefix-cls}-item-link {
+      border: @border-width-base @border-style-base @border-color-base;
+      background: @component-background;
+      outline: none;
+      display: block;
+      transition: all .3s;
+
+      &:after {
+        font-size: 12px;
+        display: block;
+        font-family: "anticon";
+        text-align: center;
+        font-weight: 500;
+      }
+    }
+
+    &:focus .@{pagination-prefix-cls}-item-link,
+    &:hover .@{pagination-prefix-cls}-item-link {
+      border-color: @primary-color;
+      color: @primary-color;
+    }
+  }
+
+  &-prev {
+    .@{pagination-prefix-cls}-item-link:after {
+      content: "\e620";
+      display: block;
+    }
+  }
+
+  &-next {
+    .@{pagination-prefix-cls}-item-link:after {
+      content: "\e61f";
+      display: block;
+    }
+  }
+
+  &-disabled {
+    &,
+    &:hover,
+    &:focus {
+      cursor: not-allowed;
+      a,
+      .@{pagination-prefix-cls}-item-link {
+        border-color: @border-color-base;
+        color: @disabled-color;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &-slash {
+    margin: 0 10px 0 5px;
+  }
+
+  &-options {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px;
+
+    &-size-changer.@{ant-prefix}-select {
+      display: inline-block;
+      margin-right: 8px;
+      .ant-select-selection {
+      }
+    }
+
+    &-quick-jumper {
+      display: inline-block;
+      vertical-align: top;
+      height: @input-height-base;
+      line-height: @input-height-base;
+      color: @text-color;
+      input{
+        color:@text-color;
+        background-color: transparent;
+        border-color:rgba(255, 255, 255, 0.3);
+        &:focus{
+          box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+        }
+      }
+    }
+  }
+}
+// .ant-pagination-item:focus, .ant-pagination-item:hover {
+//   -webkit-transition: all .3s;
+//   transition: all .3s;
+//   border-color: @primary-color;
+//   background:@primary-color;
+// }
+// .ant-pagination-item:focus a, .ant-pagination-item:hover a {
+//  color:@black7;
+// }
+.ant-pagination-simple .ant-pagination-simple-pager input{
+  // border-radius: 25px;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
+  color:@text-color;
+   width: 35px;
+}
+.ant-pagination-simple-pager{
+  color:@text-color;
+   margin-left: 8px;
+}

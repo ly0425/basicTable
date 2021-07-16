@@ -1,0 +1,361 @@
+/**
+ * Created by Administrator on 2017-06-14.
+ */
+
+const fontLibrary = [
+    'Arial',
+    'Arial Black',
+    'Arial Narrow',
+    'Arial Rounded MT Bold',
+    'Arial Unicode MS',
+    'Baskerville Old Face',
+    'Bauhaus 93',
+    'Bell MT',
+    'Berlin Sans FB',
+    'Berlin Sans FB Demi',
+    'Bernard MT Condensed',
+    'Birch Std',
+    'Blackadder ITC',
+    'Blackoak Std',
+    'Bodoni MT',
+    'Bodoni MT Black',
+    'Bodoni MT Condensed',
+    'Bodoni MT Poster Compressed',
+    'Book Antiqua',
+    'Bookman Old Style',
+    'Bookshelf Symbol 7',
+    'Bradley Hand ITC',
+    'Britannic Bold',
+    'Broadway',
+    'Brush Script MT',
+    'Brush Script Std',
+    'Calibri',
+    'Calibri Light',
+    'Californian FB',
+    'Calisto MT',
+    'Cambria',
+    'Cambria Math',
+    'Candara',
+    'Castellar',
+    'Centaur',
+    'Century',
+    'Century Gothic',
+    'Century Schoolbook',
+    'Chaparral Pro',
+    'Chaparral Pro Light',
+    'Charlemagne Std',
+    'Chiller',
+    'Colonna MT',
+    'Comic Sans MS',
+    'Consolas',
+    'Constantia',
+    'Cooper Black',
+    'Cooper Std Black',
+    'Copperplate Gothic Bold',
+    'Copperplate Gothic Light',
+    'Corbel',
+    'Courier New',
+    'Curlz MT',
+    'Dialog',
+    'DialogInput',
+    'Ebrima',
+    'Edwardian Script ITC',
+    'Elephant',
+    'Engravers MT',
+    'Eras Bold ITC',
+    'Eras Demi ITC',
+    'Eras Light ITC',
+    'Eras Medium ITC',
+    'Felix Titling',
+    'Footlight MT Light',
+    'Forte',
+    'Franklin Gothic Book',
+    'Franklin Gothic Demi',
+    'Franklin Gothic Demi Cond',
+    'Franklin Gothic Heavy',
+    'Franklin Gothic Medium',
+    'Franklin Gothic Medium Cond',
+    'Freestyle Script',
+    'French Script MT',
+    'Gabriola',
+    'Gadugi',
+    'Garamond',
+    'Georgia',
+    'Giddyup Std',
+    'Gigi',
+    'Gill Sans MT',
+    'Gill Sans MT Condensed',
+    'Gill Sans MT Ext Condensed Bold',
+    'Gill Sans Ultra Bold',
+    'Gill Sans Ultra Bold Condensed',
+    'Gloucester MT Extra Condensed',
+    'Goudy Old Style',
+    'Goudy Stout',
+    'Haettenschweiler',
+    'Harlow Solid Italic',
+    'Harrington',
+    'High Tower Text',
+    'Hobo Std',
+    'Impact',
+    'Imprint MT Shadow',
+    'Informal Roman',
+    'Javanese Text',
+    'Jokerman',
+    'Juice ITC',
+    'Kozuka Gothic Pr6N B',
+    'Kozuka Gothic Pr6N EL',
+    'Kozuka Gothic Pr6N H',
+    'Kozuka Gothic Pr6N L',
+    'Kozuka Gothic Pr6N M',
+    'Kozuka Gothic Pr6N R',
+    'Kozuka Gothic Pro B',
+    'Kozuka Gothic Pro EL',
+    'Kozuka Gothic Pro H',
+    'Kozuka Gothic Pro L',
+    'Kozuka Gothic Pro M',
+    'Kozuka Gothic Pro R',
+    'Kozuka Mincho Pr6N B',
+    'Kozuka Mincho Pr6N EL',
+    'Kozuka Mincho Pr6N H',
+    'Kozuka Mincho Pr6N L',
+    'Kozuka Mincho Pr6N M',
+    'Kozuka Mincho Pr6N R',
+    'Kozuka Mincho Pro B',
+    'Kozuka Mincho Pro EL',
+    'Kozuka Mincho Pro H',
+    'Kozuka Mincho Pro L',
+    'Kozuka Mincho Pro M',
+    'Kozuka Mincho Pro R',
+    'Kristen ITC',
+    'Kunstler Script',
+    'Leelawadee',
+    'Leelawadee UI',
+    'Leelawadee UI Semilight',
+    'Letter Gothic Std',
+    'Lithos Pro Regular',
+    'Lucida Bright',
+    'Lucida Calligraphy',
+    'Lucida Console',
+    'Lucida Fax',
+    'Lucida Handwriting',
+    'Lucida Sans',
+    'Lucida Sans Typewriter',
+    'Lucida Sans Unicode',
+    'Magneto',
+    'Maiandra GD',
+    'Malgun Gothic',
+    'Malgun Gothic Semilight',
+    'Marlett',
+    'Matura MT Script Capitals',
+    'Mesquite Std',
+    'Microsoft Himalaya',
+    'Microsoft JhengHei',
+    'Microsoft JhengHei Light',
+    'Microsoft JhengHei UI',
+    'Microsoft JhengHei UI Light',
+    'Microsoft New Tai Lue',
+    'Microsoft PhagsPa',
+    'Microsoft Sans Serif',
+    'Microsoft Tai Le',
+    'Microsoft Uighur',
+    'Microsoft YaHei UI',
+    'Microsoft YaHei UI Light',
+    'Microsoft Yi Baiti',
+    'MingLiU-ExtB',
+    'MingLiU_HKSCS-ExtB',
+    'Minion Pro',
+    'Minion Pro Cond',
+    'Minion Pro Med',
+    'Minion Pro SmBd',
+    'Mistral',
+    'Modern No. 20',
+    'Mongolian Baiti',
+    'Monospaced',
+    'Monotype Corsiva',
+    'MS Gothic',
+    'MS Outlook',
+    'MS PGothic',
+    'MS Reference Sans Serif',
+    'MS Reference Specialty',
+    'MS UI Gothic',
+    'MT Extra',
+    'MV Boli',
+    'Myanmar Text',
+    'Myriad Arabic',
+    'Myriad Hebrew',
+    'Myriad Pro',
+    'Myriad Pro Cond',
+    'Myriad Pro Light',
+    'Niagara Engraved',
+    'Niagara Solid',
+    'Nirmala UI',
+    'Nirmala UI Semilight',
+    'Nueva Std',
+    'Nueva Std Cond',
+    'OCR A Extended',
+    'OCR A Std',
+    'Old English Text MT',
+    'Onyx',
+    'Orator Std',
+    'Palace Script MT',
+    'Palatino Linotype',
+    'Papyrus',
+    'Parchment',
+    'Perpetua',
+    'Perpetua Titling MT',
+    'Playbill',
+    'PMingLiU-ExtB',
+    'Poor Richard',
+    'Poplar Std',
+    'Prestige Elite Std',
+    'Pristina',
+    'Rage Italic',
+    'Ravie',
+    'Rockwell',
+    'Rockwell Condensed',
+    'Rockwell Extra Bold',
+    'Rosewood Std Regular',
+    'SansSerif',
+    'Script MT Bold',
+    'Segoe MDL2 Assets',
+    'Segoe Print',
+    'Segoe Script',
+    'Segoe UI',
+    'Segoe UI Black',
+    'Segoe UI Emoji',
+    'Segoe UI Historic',
+    'Segoe UI Light',
+    'Segoe UI Semibold',
+    'Segoe UI Semilight',
+    'Segoe UI Symbol',
+    'Serif',
+    'Showcard Gothic',
+    'SimSun-ExtB',
+    'Sitka Banner',
+    'Sitka Display',
+    'Sitka Heading',
+    'Sitka Small',
+    'Sitka Subheading',
+    'Sitka Text',
+    'Snap ITC',
+    'Stencil',
+    'Stencil Std',
+    'Sylfaen',
+    'Symbol',
+    'Tahoma',
+    'Tekton Pro',
+    'Tekton Pro Cond',
+    'Tekton Pro Ext',
+    'Tempus Sans ITC',
+    'Times New Roman',
+    'Trajan Pro',
+    'Trebuchet MS',
+    'Tw Cen MT',
+    'Tw Cen MT Condensed',
+    'Tw Cen MT Condensed Extra Bold',
+    'Verdana',
+    'Viner Hand ITC',
+    'Vivaldi',
+    'Vladimir Script',
+    'Webdings',
+    'Wide Latin',
+    'Wingdings',
+    'Wingdings 2',
+    'Wingdings 3',
+    'Yu Gothic',
+    'Yu Gothic Light',
+    'Yu Gothic Medium',
+    'Yu Gothic UI',
+    'Yu Gothic UI Light',
+    'Yu Gothic UI Semibold',
+    'Yu Gothic UI Semilight',
+    'ZWAdobeF',
+    '仿宋',
+    '华文中宋',
+    '华文仿宋',
+    '华文宋体',
+    '华文彩云',
+    '华文新魏',
+    '华文楷体',
+    '华文琥珀',
+    '华文细黑',
+    '华文行楷',
+    '华文隶书',
+    '宋体',
+    '幼圆',
+    '微软雅黑',
+    '微软雅黑 Light',
+    '新宋体',
+    '方正姚体',
+    '方正舒体',
+    '楷体',
+    '等线',
+    '等线 Light',
+    '隶书',
+    '黑体'];
+
+class Common {
+    genId(IDType=undefined){
+        let firstChar = 'c';
+        if(this.isCheckEmpty(IDType) !== '')
+            firstChar = IDType.substr(0,1).toLowerCase();
+
+        const strGUID = firstChar + 'xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxxxx';
+
+        return strGUID.replace(/[xy]/g, function(c) {
+            let r = Math.random() * 16 | 0,
+                v = c === 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        }).toUpperCase();
+    };
+
+    getFont(){
+        return fontLibrary;
+    };
+
+    getPrintServiceAPIURL(){
+        let apiURL = '';
+        apiURL = 'http://192.168.1.43:8078/print/';
+        //apiURL = 'print/';
+        return apiURL;
+    }
+
+    isCheckEmpty(value){
+        if(value === '' || value === undefined || value === null)
+            return ''
+
+        return value;
+    }
+
+    getAreaName(areaName){
+        let tmpAreaName = '';
+
+        if (this.isCheckEmpty(areaName) === '')
+            tmpAreaName = '';
+        else {
+            if (areaName === "printHeaderArea" || areaName === 'printHeaderRegion') {
+                tmpAreaName = 'printHeaderRegion';
+            }
+            else if (areaName === "printFooterArea" || areaName === 'printFooterRegion') {
+                tmpAreaName = 'printFooterRegion';
+            }
+            else if (areaName === "printBodyArea" || areaName === 'TableBody' || areaName === 'SpreadsheetTableBody') {
+                tmpAreaName = 'TableBody';
+            }
+            else if (areaName === "pageHeaderArea" || areaName === 'pageHeaderRegion') {
+                tmpAreaName = 'pageHeaderRegion';
+            }
+            else if (areaName === "pageFooterArea" || areaName === 'pageFooterRegion') {
+                tmpAreaName = 'pageFooterRegion';
+            }
+            else if(areaName === 'table' || areaName === 'Table'){
+                tmpAreaName = 'table'
+            }
+        }
+
+        return tmpAreaName;
+    };
+
+}
+
+export default Common;

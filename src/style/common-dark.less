@@ -1,0 +1,50 @@
+ .dark{ 
+    //在body下的全局样式
+    @import './color-dark.less';
+    @import './special-ant.less';
+    @import './pages/customselect.less';
+    //bi专属样式
+    .bi{
+        // @import './components/dark';
+        //自定义的公共类(与尺寸相关的)
+        @import './public-size-stye.less';
+        //自定义的公共类
+        @import './custom-common.less';
+        //各页面样式
+        @import './pages/analysisModelEdit.less';
+        @import './pages/tabsDesignerModelEdit.less';
+        @import './pages/intelligentReportModel.less';
+        @import './pages/step.less';
+        @import './pages/Stepnew2.less';
+        @import './pages/dataDictionary.less';
+        @import './pages/categorySubject.less';
+        @import './pages/chartDesigner.less';
+        @import './pages/react-contextmenu.less';
+        @import './pages/Spreadsheet.less';
+        @import './pages/tableDesigner.less';
+        @import './pages/dashboardContainer.less';
+        @import './pages/dashboardNew.less';
+        @import './pages/braftEditor.less';
+        @import './pages/expressionEditor.less';
+        @import './pages/ConditionsModal.less';
+        @import './pages/ConditionsPlane.less';
+        @import './pages/ActionModal.less';
+        @import './pages/intelligentReport.less';
+        @import './pages/intelligentReport_new.less';
+        @import './pages/htmlcontainerDesignerModel.less';
+        @import './pages/AuthorityModal.less';
+        @import './pages/Datasource.less';
+
+     }
+     .removerCssTransforms{
+        transform: none!important;
+        padding-top: 16px;
+        padding-left: 16px;
+    }
+    // .ant-table-fixed-header .ant-table-scroll .ant-table-header{
+    //     overflow-x:hidden ;
+    //     overflow-y: scroll;
+    //   }
+}
+
+

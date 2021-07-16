@@ -1,0 +1,78 @@
+.gather-modal-input{
+  width: 800px;
+  margin: 12px 0px;
+}
+.gather-modal-loading{
+  position: absolute;
+  width: 1350px;
+  height: 480px;
+  top: 55px;
+  z-index: 2;
+  cursor: not-allowed;
+  .spin-loading{
+    left: 600px;
+    top: 180px;
+    position: absolute;
+  }
+}
+.gather-modal-container{
+  height: 350px;
+}
+
+.gather-modal-list{
+  list-style: none;
+  margin-top: 12px;
+  .gather-modal-list-item{
+    float: left;
+  }
+  .table-list-container{
+    overflow: auto;
+    height: 100%;
+    padding: 12px;
+    .table-list-item-active{
+      background-color: #6b9de3 !important;
+    }
+    .table-list-item{
+      cursor: pointer;
+      width: 100%;
+      background-color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .table-list-item:hover{
+      background-color: #e9f7fe;
+      cursor: pointer;
+    }
+  }
+  .table-container{
+    width: 1000px;
+    overflow: auto;
+    display: inline-block;
+    margin-top: 12px;
+    height: 270px;
+  }
+  .gather-modal-list-item:first-child{
+    width: 300px;
+    height: 350px;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+  }
+  .gather-modal-list-item:nth-child(2) {
+    width: 1024px;
+    height: 350px;
+    margin-left: 12px;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    padding: 12px;
+    position: relative;
+    .no-data{
+      position: absolute;
+      top: 180px;
+      left: 400px;
+      font-size: 20px;
+    }
+  }
+  
+}
+

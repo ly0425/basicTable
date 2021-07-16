@@ -1,0 +1,27 @@
+//@import "~antd/lib/style/mixins/index";
+//@import "~antd/lib/table/style/index";
+//@import "../../style/themes/dark";
+//@import "../../style/mixins/index";
+//@import "./mixin";
+@import "./search-input-dark";
+.@{ant-prefix}-input{
+    height:30px;
+    background: transparent;
+    border-color:@bordercolor;
+    color: @text-color;
+  &.borderRadius{
+    border-radius: @bi-select-and-input-border-radius;
+  }
+}
+.@{ant-prefix}-input-group{
+  &-addon {
+    color: @input-color;
+    background-color: @black7;
+    border: @border-width-base @border-style-base @input-border-color;
+    border-left: none;
+    vertical-align: top;
+  }
+}
+.ant-input-affix-wrapper .ant-input-prefix, .ant-input-affix-wrapper .ant-input-suffix {
+  color: @white3;
+}

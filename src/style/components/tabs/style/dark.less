@@ -1,0 +1,34 @@
+//@import "../../style/themes/default";
+//@import "~antd/lib/style/mixins/index";
+//@import "~antd/lib/tabs/style/index";
+@tab-prefix-cls: ~"@{ant-prefix}-tabs";
+
+.@{tab-prefix-cls}{
+    &.@{tab-prefix-cls}-card > .@{tab-prefix-cls}-bar .@{tab-prefix-cls}-tab{
+              background: @black2;
+              color: @white7;
+              border-color: @black2
+        } 
+    &.@{tab-prefix-cls}-card > .@{tab-prefix-cls}-bar .@{tab-prefix-cls}-tab-active{
+              background: none;
+              color: @primary-color;
+              border-color: @white3;
+        } 
+     &.@{tab-prefix-cls}-card > .@{tab-prefix-cls}-bar .@{tab-prefix-cls}-tab .@{iconfont-css-prefix}-close {
+        color: @white3;
+        &:hover {
+          color: @primary-color;
+          background: @black2;
+        }
+      }
+      &-bar {
+        border-bottom-color:@white3;
+      }
+       &-extra-content {
+        .@{tab-prefix-cls}-new-tab {
+              color: #fff;
+        }
+      }
+      &-ink-bar{background: @primary-color}
+
+}

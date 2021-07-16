@@ -1,0 +1,37 @@
+@message-prefix-cls: ~"@{ant-prefix}-message";
+
+.@{message-prefix-cls} {
+  z-index: @zindex-message;
+   &-notice-content {
+   	  padding: 0
+   }
+   &-success,&-error,&-warning,&-info,
+   &-loading{
+   	  padding: 16px 24px 16px 16px;
+   	  border-radius: 4px 0 0 4px;
+   	  border-left-width: 6px;
+   	  border-left-style: solid;
+   }
+   &-success {
+	  border-left-color:@success-color ; 
+  }
+  &-error {
+     border-left-color:@error-color;
+  }
+
+  &-warning {
+      border-left-color:@warning-color;
+  }
+
+  &-info,
+  &-loading {
+      border-left-color:@info-color;
+  }
+  
+  &-success .@{iconfont-css-prefix} {
+    color:@success-color; 
+  }
+  .@{iconfont-css-prefix} {
+    margin-right: 16px;
+  }
+}

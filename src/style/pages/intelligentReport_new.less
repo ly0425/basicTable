@@ -1,0 +1,103 @@
+.ir-addbtn{
+    display:flex ;
+    justify-content:center ;
+    align-items:center ;
+    height:84px ;
+    .ant-pagination-item-import{
+        border-radius: 50% !important ;
+    }
+    .ant-pagination-item-active{
+        color: #fff;
+        background: #1890FF;
+        border: 1px solid #1890FF;
+    }
+    .ant-pagination-item-import.ant-pagination-item-active a{
+        color: #fff !important ;
+    }
+    span{
+        margin-left: 8px;
+        font-size: 14px;
+        color: @color-second-title-white-toggle; 
+    }
+}
+
+.base-border-top-bottom-intelligentReport{
+    /* border-top: 1px solid @base-border-color; */
+    border-bottom: 1px solid @base-border-color;
+}
+
+.ir-main{
+    padding:24px;
+    .ir-span-color{
+        color: @color-second-title-white-toggle; 
+    } 
+    .ir-search{
+        position: relative;
+        padding-right: 130px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: 1px solid @base-border-color;
+        min-height: 80px;
+        .form-item{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            width: 310px;
+            .left{
+                display: inline-block;
+            }
+            .right{
+                display: inline-block;
+                width: 224px;
+            }
+        }
+        .form-button{
+            position: absolute;
+            right: 24px;
+            top: 24px;
+        }
+    }
+    .ir-table{
+        margin-top: 16px;
+        .table_iconpd{
+            display: flex;
+            justify-content: center;
+            a{
+                margin-left: 6px;
+            }
+        }
+    }
+}
+
+.ir-step{
+    .step-items{
+        height:72px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon{
+            font-size: 24px;
+            cursor: default;
+        }
+        .active{
+            color:@dashboard-trigger-btn-bg;
+        }
+        .line{
+            display: inline-block;
+            width: 192px;
+            height: 1px;
+            background-color: #d9d9d9;
+            &.active{
+                background-color:@dashboard-trigger-btn-bg;
+            }
+        }
+    }
+
+}
+
+// 新建智能报告中的word文件
+.ant-modal-content .ant-row.ant-form-item.fileIcon{
+    width: 100% !important ;
+}
